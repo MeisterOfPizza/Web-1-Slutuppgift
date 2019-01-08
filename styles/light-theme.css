@@ -1,12 +1,68 @@
+@font-face {
+    font-family: Roboto;
+    src: url("../fonts/Roboto/Roboto-Regular.ttf");
+}
+
+@font-face {
+    font-family: Roboto-Bold;
+    src: url("../fonts/Roboto/Roboto-Bold.ttf");
+}
+
+@font-face {
+    font-family: Staatliches;
+    src: url("../fonts/Staatliches/Staatliches-Regular.ttf");
+}
+
+/* project wide */
+
 body {
     margin: 0;
+    /*font-family: Roboto;*/
+    font-family: Staatliches;
 }
+
+h1, h2, h3, h4, h5, h6 {
+    /*font-family: Roboto-Bold;*/
+    font-family: Staatliches;
+}
+
+.vertical-middle {
+    display: table;
+    height: 100%;
+}
+
+.vertical-middle__inner {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.horizontal-middle {
+    margin: auto;
+}
+
+/* helpers */
+
+.vertical-line-after::after {
+    content: "";
+    height: inherit;
+    width: 1px;
+    background-color: rgba(255, 255, 255, 0.5);
+    position: absolute;
+}
+
+/* index */
 
 div.index-background {
     width: 100%;
     height: 850px;
     background-position: center;
     background-size: cover;
+}
+
+h2.page-intro-title {
+    color: white;
+    font-size: 50px;
+    text-transform: uppercase;
 }
 
 div.site-block {
@@ -18,10 +74,11 @@ div.page-top-bar {
 }
 
 header.page-top-bar {
+    display: table;
     position: fixed;
     color: white;
     width: 100%;
-    height: 60px;
+    height: 75px;
 }
 
 header.page-top-bar::after {
@@ -33,6 +90,11 @@ header.page-top-bar::after {
     z-index: 1024;
     bottom: 0;
     left: 0;
+}
+
+div.page-top-bar__inner {
+    display: table-cell;
+    vertical-align: middle;
 }
 
 img.page-logo {
@@ -53,16 +115,20 @@ div.header-container__logo-name {
     margin-left: 100px;
 }
 
-div.header-container__nav {
+nav.header-container__nav {
     float: right;
     margin-right: 100px;
 }
 
 ul.nav-list {
     list-style-type: none;
+    margin: 0;
+    padding: 12.5px 0
 }
 
 ul.nav-list li {
     display: inline-block;
     margin-left: 25px;
+    font-size: 19px;
+    vertical-align: middle;
 }

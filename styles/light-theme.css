@@ -1,0 +1,68 @@
+body {
+    margin: 0;
+}
+
+div.index-background {
+    width: 100%;
+    height: 850px;
+    background-position: center;
+    background-size: cover;
+}
+
+div.site-block {
+    
+}
+
+div.page-top-bar {
+    
+}
+
+header.page-top-bar {
+    position: fixed;
+    color: white;
+    width: 100%;
+    height: 60px;
+}
+
+header.page-top-bar::after {
+    content: "";
+    width: 100%;
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.5);
+    position: absolute;
+    z-index: 1024;
+    bottom: 0;
+    left: 0;
+}
+
+img.page-logo {
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+h1.page-name {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0;
+}
+
+div.header-container__logo-name {
+    display: inline-block;
+    margin-left: 100px;
+}
+
+div.header-container__nav {
+    float: right;
+    margin-right: 100px;
+}
+
+ul.nav-list {
+    list-style-type: none;
+}
+
+ul.nav-list li {
+    display: inline-block;
+    margin-right: 5px;
+}

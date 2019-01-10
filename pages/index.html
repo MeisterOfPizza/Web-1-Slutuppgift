@@ -3,17 +3,18 @@
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="../styles/light-theme.css">
 
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="../scripts/nav.js"></script>
 </head>
 
 <body>
     <div>
-        <header class="site-top-bar">
+        <header id="header" class="site-top-bar">
             <div class="site-top-bar__inner">
                 <div class="header-container__logo-name">
-                    <img class="site-logo" alt="logo" src="https://img.icons8.com/metro/1600/crown.png" />
+                    <img class="site-logo" alt="logo" src="../images/logo/logo.png" />
                     <h1 class="site-name">NAME</h1>
                 </div>
                 <nav class="header-container__nav">
@@ -31,7 +32,7 @@
         </header>
 
         <main>
-            <section class="index-background site-block" style="background-image: url(https://upload.wikimedia.org/wikipedia/commons/c/c8/Mars_zichtbaar_vanaf_de_alpe_du_hues.jpg)">
+            <section class="background-img site-block" style="background-image: url(../images/backgrounds/space-1.jpg)">
                 <div class="vertical-middle horizontal-middle">
                     <div class="vertical-middle__inner">
                         <h2 class="site-intro-title">
@@ -41,21 +42,48 @@
                     </div>
                 </div>
             </section>
-            <section class="index-background site-block" style="background-image: url(https://www.gannett-cdn.com/presto/2018/08/06/USAT/d7e9198a-b2fa-4ca6-b947-31c3751cc248-GettyImages-898660948.jpg?width=1080&quality=250)">
+            <div class="site-block__more-content-arrow horizontal-middle">
+                <div class="site-block__more-content-arrow__inner">
+                    <div class="horizontal-middle vertical-middle">
+                        <a class="vertical-middle__inner site-block__more-content-arrow__inner__arrow hidden-link material-icons"
+                            href="#2">&#xe5db;</a>
+                    </div>
+                </div>
+            </div>
+            <section class="background-img site-block" style="background-image: url(../images/backgrounds/nebula-1.jpg)">
+                <a id="2" class="anchor"></a>
                 <div class="vertical-middle horizontal-middle">
                     <div class="vertical-middle__inner">
                         <h2 class="site-intro-title">
-                            This is space
+                            !
+                        </h2>
+                    </div>
+                </div>
+            </section>
+            <div class="site-block__more-content-arrow horizontal-middle">
+                <div class="site-block__more-content-arrow__inner">
+                    <div class="horizontal-middle vertical-middle">
+                        <a class="vertical-middle__inner site-block__more-content-arrow__inner__arrow hidden-link material-icons"
+                            href="#3">&#xe5db;</a>
+                    </div>
+                </div>
+            </div>
+            <section class="background-img site-block" style="background-image: url(../images/backgrounds/nebula-1.jpg)">
+                <a id="3" class="anchor"></a>
+                <div class="vertical-middle horizontal-middle">
+                    <div class="vertical-middle__inner">
+                        <h2 class="site-intro-title">
+                            !
                         </h2>
                     </div>
                 </div>
             </section>
         </main>
 
-        <aside class="index-aside">
+        <aside class="index-aside none-pointer-events">
             <div class="vertical-middle full-width">
                 <div class="vertical-middle__inner full-width">
-                    <ul class="index-aside__findme-container">
+                    <ul class="index-aside__findme-container all-pointer-events">
                         <li><img alt="twitter" src="../images/foreign logos/Twitter_Logo_Blue.svg" /></li>
                         <li><img alt="instagram" src="../images/foreign logos/IG_Glyph_Fill.png" /></li>
                         <li>ICON</li>
@@ -67,7 +95,7 @@
         </aside>
 
         <footer>
-            
+
         </footer>
     </div>
 </body>

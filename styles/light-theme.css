@@ -15,6 +15,10 @@
 
 /* project wide */
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
     /*font-family: Roboto;*/
@@ -24,6 +28,36 @@ body {
 h1, h2, h3, h4, h5, h6 {
     /*font-family: Roboto-Bold;*/
     font-family: Staatliches;
+    font-weight: 100;
+}
+
+/* animation helpers */
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fade-out {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes spin-right {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 /* helpers */
@@ -54,6 +88,14 @@ h1, h2, h3, h4, h5, h6 {
     cursor: pointer;
 }
 
+.all-pointer-events {
+    pointer-events: all;
+}
+
+.none-pointer-events {
+    pointer-events: none;
+}
+
 .full-height {
     height: 100%;
 }
@@ -62,46 +104,19 @@ h1, h2, h3, h4, h5, h6 {
     width: 100%;
 }
 
-/* aside */
-
-aside.index-aside {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 100%;
-    height: 850px;
+a.hidden-link {
+    text-decoration: inherit;
+    color: inherit;
 }
 
-ul.index-aside__findme-container {
-    float: right;
-    margin-right: 50px;
-    list-style-type: none;
+a.anchor {
+    display: block;
+    position: relative;
+    top: -75px; /* NOTE: Header height */
+    visibility: hidden;
 }
 
-ul.index-aside__findme-container img {
-    height: 60px;
-    width: 60px;
-    cursor: pointer;
-}
-
-/* index */
-
-section.index-background {
-    width: 100%;
-    height: 850px;
-    background-position: center;
-    background-size: cover;
-}
-
-h2.site-intro-title {
-    color: white;
-    font-size: 50px;
-    text-transform: uppercase;
-}
-
-section.site-block {
-    
-}
+/* header / navbar */
 
 header.site-top-bar {
     display: table;
@@ -110,6 +125,12 @@ header.site-top-bar {
     width: 100%;
     height: 75px;
     z-index: 1024;
+    box-shadow: inset 0 0 0 0.01px white; /* Reason for 0.01px: Glitching shadow */
+    transition: all ease 0.8s;
+}
+
+header.site-top-bar-flash {
+    box-shadow: inset 4100px 0 0 0.01px #333; /* Reason for 0.01px: Glitching shadow */
 }
 
 header.site-top-bar::after {
@@ -133,6 +154,7 @@ img.site-logo {
     height: 50px;
     display: inline-block;
     vertical-align: middle;
+    margin-right: 15px;
 }
 
 h1.site-name {
@@ -159,7 +181,76 @@ ul.nav-list {
 
 ul.nav-list > li {
     display: inline-block;
-    margin-left: 25px;
+    margin-left: 35px;
     font-size: 19px;
     vertical-align: middle;
+}
+
+/* project-wide */
+
+section.site-block {
+    width: 100%;
+    height: 825px;
+    border-bottom: 2px solid white;
+}
+
+section.background-img {
+    background-position: center;
+    background-size: cover;
+    animation: fade-in 1s;
+}
+
+div.site-block__more-content-arrow {
+    width: 100px;
+}
+
+div.site-block__more-content-arrow__inner {
+    position: absolute;
+    background-color: white;
+    width: 100px;
+    height: 100px;
+    margin-top: -50px;
+    border-radius: 50px;
+    animation: spin-right 1s ease-in-out;
+    z-index: 512;
+}
+
+div.site-block__more-content-arrow__inner div {
+    width: 65px;
+}
+
+a.site-block__more-content-arrow__inner__arrow {
+    font-size: 65px;
+}
+
+/* index aside */
+
+aside.index-aside {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 850px;
+    animation: fade-in 1.5s;
+    z-index: 512;
+}
+
+ul.index-aside__findme-container {
+    float: right;
+    margin-right: 50px;
+    list-style-type: none;
+}
+
+ul.index-aside__findme-container img {
+    height: 60px;
+    width: 60px;
+    cursor: pointer;
+}
+
+/* index */
+
+h2.site-intro-title {
+    color: white;
+    font-size: 50px;
+    text-transform: uppercase;
 }

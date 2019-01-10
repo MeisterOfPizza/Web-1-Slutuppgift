@@ -14,16 +14,43 @@
         <header id="header" class="site-top-bar">
             <div class="site-top-bar__inner">
                 <div class="header-container__logo-name">
-                    <img class="site-logo" alt="logo" src="../images/logo/logo.png" />
+                    <a class="hidden-link" href="index.html">
+                        <img class="site-logo" alt="logo" src="../images/logo/logo.png" />
+                    </a>
                     <h1 class="site-name">NAME</h1>
                 </div>
                 <nav class="header-container__nav">
                     <ul class="nav-list">
-                        <li class="pointer">HOME</li>
-                        <li class="pointer">FACTS</li>
-                        <li class="pointer">HISTORY</li>
-                        <li class="pointer">BLOG</li>
-                        <li class="pointer">ABOUT</li>
+                        <li class="pointer">
+                            <a class="hidden-link" href="index.html">
+                                <p class="moving-underline selected-link">HOME</p>
+                            </a>
+                        </li>
+                        <li class="pointer">
+                            <a class="hidden-link" href="#">
+                                <p class="moving-underline">FACTS</p>
+                            </a>
+                        </li>
+                        <li class="pointer">
+                            <a class="hidden-link" href="#">
+                                <p class="moving-underline">HISTORY</p>
+                            </a>
+                        </li>
+                        <li class="pointer">
+                            <a class="hidden-link" href="#">
+                                <p class="moving-underline">BLOG</p>
+                            </a>
+                        </li>
+                        <li class="pointer">
+                            <a class="hidden-link" href="#">
+                                <p class="moving-underline">QUOTES</p>
+                            </a>
+                        </li>
+                        <li class="pointer">
+                            <a class="hidden-link" href="#">
+                                <p class="moving-underline">ABOUT</p>
+                            </a>
+                        </li>
                         <li class="vertical-line-after" style="height: 25px"></li>
                         <li class="material-icons pointer">&#xe8b6;</li>
                     </ul>
@@ -31,7 +58,7 @@
             </div>
         </header>
 
-        <main>
+        <main id="top">
             <section class="background-img site-block" style="background-image: url(../images/backgrounds/space-1.jpg)">
                 <div class="vertical-middle horizontal-middle">
                     <div class="vertical-middle__inner">
@@ -43,7 +70,7 @@
                 </div>
             </section>
             <div class="site-block__more-content-arrow horizontal-middle">
-                <div class="site-block__more-content-arrow__inner">
+                <div class="site-block__more-content-arrow__inner bubble-hover">
                     <div class="horizontal-middle vertical-middle">
                         <a class="vertical-middle__inner site-block__more-content-arrow__inner__arrow hidden-link material-icons"
                             href="#2">&#xe5db;</a>
@@ -61,7 +88,7 @@
                 </div>
             </section>
             <div class="site-block__more-content-arrow horizontal-middle">
-                <div class="site-block__more-content-arrow__inner">
+                <div class="site-block__more-content-arrow__inner bubble-hover">
                     <div class="horizontal-middle vertical-middle">
                         <a class="vertical-middle__inner site-block__more-content-arrow__inner__arrow hidden-link material-icons"
                             href="#3">&#xe5db;</a>
@@ -83,19 +110,29 @@
         <aside class="index-aside none-pointer-events">
             <div class="vertical-middle full-width">
                 <div class="vertical-middle__inner full-width">
-                    <ul class="index-aside__findme-container all-pointer-events">
-                        <li><img alt="twitter" src="../images/foreign logos/Twitter_Logo_Blue.svg" /></li>
-                        <li><img alt="instagram" src="../images/foreign logos/IG_Glyph_Fill.png" /></li>
-                        <li>ICON</li>
-                        <li>ICON</li>
-                        <li>ICON</li>
-                    </ul>
+                    <div>
+                        <ul class="index-aside__findme-container all-pointer-events">
+                            <li><img class="bubble-hover" alt="twitter" src="../images/foreign logos/Twitter Logo.svg" /></li>
+                            <li><img class="bubble-hover" alt="instagram" src="../images/foreign logos/Instagram Logo.png" /></li>
+                            <li><img class="bubble-hover" alt="linkedin" src="../images/foreign logos/LinkedIn Logo.png" /></li>
+                            <li><img class="bubble-hover" alt="github" src="../images/foreign logos/Github Logo.png" /></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </aside>
 
         <footer>
-
+            <div class="footer-notes">
+                <div class="vertical-middle">
+                    <div class="vertical-middle__inner">
+                        <p>Copyright &copy; Emil Engelin 2019</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__to-top-container vertical-middle">
+                <a class="vertical-middle__inner footer__to-top-container__inner hidden-link material-icons" href="#top">&#xe5d8;</a>
+            </div>
         </footer>
     </div>
 </body>

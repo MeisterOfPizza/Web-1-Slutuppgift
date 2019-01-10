@@ -17,18 +17,43 @@
 
 html {
     scroll-behavior: smooth;
+    height: 100%;
 }
 
 body {
     margin: 0;
     /*font-family: Roboto;*/
     font-family: Staatliches;
+    min-height: 100%;
 }
 
 h1, h2, h3, h4, h5, h6 {
     /*font-family: Roboto-Bold;*/
     font-family: Staatliches;
     font-weight: 100;
+}
+
+footer {
+    background-color: #333;
+    height: 75px;
+}
+
+div.footer__to-top-container {
+    float: right;
+    margin-right: 10px;
+}
+
+a.footer__to-top-container__inner {
+    color: white !important;
+    font-size: 50px;
+}
+
+div.footer-notes {
+    display: inline-block;
+    margin-left: 10px;
+    height: 100%;
+    color: white;
+    font-size: 20px;
 }
 
 /* animation helpers */
@@ -115,6 +140,50 @@ a.anchor {
     top: -75px; /* NOTE: Header height */
     visibility: hidden;
 }
+
+.underline {
+    text-decoration: underline;
+}
+
+.selected-link {
+    color: orangered;
+}
+
+.bubble-hover {
+    transition: all 0.1s ease-in-out;
+}
+
+.bubble-hover:hover {
+    transform: scale(1.05);
+}
+
+/* moving underline */
+
+.moving-underline {
+    display: inline;
+    position: relative;
+    overflow: hidden;
+  }
+  .moving-underline:after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    right: 0;
+    width: 0;
+    bottom: -5px;
+    background: white;
+    height: 4px;
+    transition-property: width;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-out;
+  }
+  .moving-underline:hover:after,
+  .moving-underline:focus:after,
+  .moving-underline:active:after {
+    left: 0;
+    right: auto;
+    width: 100%;
+  }
 
 /* header / navbar */
 
@@ -211,12 +280,12 @@ div.site-block__more-content-arrow__inner {
     height: 100px;
     margin-top: -50px;
     border-radius: 50px;
-    animation: spin-right 1s ease-in-out;
     z-index: 512;
 }
 
 div.site-block__more-content-arrow__inner div {
     width: 65px;
+    animation: spin-right 1s ease-in-out;
 }
 
 a.site-block__more-content-arrow__inner__arrow {
@@ -239,6 +308,10 @@ ul.index-aside__findme-container {
     float: right;
     margin-right: 50px;
     list-style-type: none;
+}
+
+ul.index-aside__findme-container li:not(:last-child) {
+    margin-bottom: 10px;
 }
 
 ul.index-aside__findme-container img {

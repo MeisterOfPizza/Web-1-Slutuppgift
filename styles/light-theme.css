@@ -26,6 +26,8 @@ h1, h2, h3, h4, h5, h6 {
     font-family: Staatliches;
 }
 
+/* helpers */
+
 .vertical-middle {
     display: table;
     height: 100%;
@@ -40,8 +42,6 @@ h1, h2, h3, h4, h5, h6 {
     margin: auto;
 }
 
-/* helpers */
-
 .vertical-line-after::after {
     content: "";
     height: inherit;
@@ -50,38 +50,69 @@ h1, h2, h3, h4, h5, h6 {
     position: absolute;
 }
 
+.pointer {
+    cursor: pointer;
+}
+
+.full-height {
+    height: 100%;
+}
+
+.full-width {
+    width: 100%;
+}
+
+/* aside */
+
+aside.index-aside {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 850px;
+}
+
+ul.index-aside__findme-container {
+    float: right;
+    margin-right: 50px;
+    list-style-type: none;
+}
+
+ul.index-aside__findme-container img {
+    height: 60px;
+    width: 60px;
+    cursor: pointer;
+}
+
 /* index */
 
-div.index-background {
+section.index-background {
     width: 100%;
     height: 850px;
     background-position: center;
     background-size: cover;
 }
 
-h2.page-intro-title {
+h2.site-intro-title {
     color: white;
     font-size: 50px;
     text-transform: uppercase;
 }
 
-div.site-block {
+section.site-block {
     
 }
 
-div.page-top-bar {
-    
-}
-
-header.page-top-bar {
+header.site-top-bar {
     display: table;
     position: fixed;
     color: white;
     width: 100%;
     height: 75px;
+    z-index: 1024;
 }
 
-header.page-top-bar::after {
+header.site-top-bar::after {
     content: "";
     width: 100%;
     height: 1px;
@@ -92,19 +123,19 @@ header.page-top-bar::after {
     left: 0;
 }
 
-div.page-top-bar__inner {
+div.site-top-bar__inner {
     display: table-cell;
     vertical-align: middle;
 }
 
-img.page-logo {
+img.site-logo {
     width: 50px;
     height: 50px;
     display: inline-block;
     vertical-align: middle;
 }
 
-h1.page-name {
+h1.site-name {
     display: inline-block;
     vertical-align: middle;
     margin: 0;
@@ -126,7 +157,7 @@ ul.nav-list {
     padding: 12.5px 0
 }
 
-ul.nav-list li {
+ul.nav-list > li {
     display: inline-block;
     margin-left: 25px;
     font-size: 19px;

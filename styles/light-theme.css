@@ -165,14 +165,19 @@ a.anchor {
     overflow: hidden;
   }
   .moving-underline:after {
+    height: 4px;
+    width: 0;
+
     content: "";
+
     position: absolute;
     z-index: -1;
+
     right: 0;
-    width: 0;
     bottom: -5px;
+
     background: white;
-    height: 4px;
+
     transition-property: width;
     transition-duration: 0.3s;
     transition-timing-function: ease-out;
@@ -253,6 +258,33 @@ ul.nav-list > li {
     margin-left: 35px;
     font-size: 19px;
     vertical-align: middle;
+}
+
+ul.nav-list > #burger {
+    display: none;
+}
+
+/* media */
+
+@media screen and (max-width: 1200px) {
+    ul.nav-list > li {
+        display: none;
+        margin-left: 0;
+    }
+
+    ul.nav-list > #nav-list-vertical-line {
+        display: none !important;
+    }
+
+    ul.nav-list > #nav-list-burger {
+        display: block;
+    }
+}
+
+/* expanding nav list */
+
+.nav-list--expanded > li {
+    display: block !important;
 }
 
 /* project-wide */

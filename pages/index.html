@@ -20,7 +20,10 @@
                     <h1 class="site-name">NAME</h1>
                 </div>
                 <nav class="header-container__nav">
-                    <ul class="nav-list">
+                    <ul id="nav-list" class="nav-list">
+                        <li id="nav-list-burger">
+                            <span class="material-icons pointer" onclick="expandNav()">&#xe5d2;</span>
+                        </li>
                         <li class="pointer">
                             <a class="hidden-link" href="index.html">
                                 <p class="moving-underline selected-link">HOME</p>
@@ -33,7 +36,7 @@
                         </li>
                         <li class="pointer">
                             <a class="hidden-link" href="#">
-                                <p class="moving-underline">HISTORY</p>
+                                <p class="moving-underline">TIMELINE</p>
                             </a>
                         </li>
                         <li class="pointer">
@@ -51,7 +54,7 @@
                                 <p class="moving-underline">ABOUT</p>
                             </a>
                         </li>
-                        <li class="vertical-line-after" style="height: 25px"></li>
+                        <li id="nav-list-vertical-line" class="vertical-line-after" style="height: 25px"></li>
                         <li class="material-icons pointer">&#xe8b6;</li>
                     </ul>
                 </nav>
@@ -99,21 +102,21 @@
                 <div class="site-block__more-content-arrow__inner bubble-hover">
                     <div class="horizontal-middle vertical-middle">
                         <a class="vertical-middle__inner site-block__more-content-arrow__inner__arrow hidden-link material-icons"
-                            href="#history">&#xe5db;</a>
+                            href="#timeline">&#xe5db;</a>
                     </div>
                 </div>
             </div>
             <section class="background-img site-block" style="background-image: url(../images/backgrounds/nebula-1.jpg)">
-                <a id="history" class="anchor"></a>
+                <a id="timeline" class="anchor"></a>
                 <div class="vertical-middle horizontal-middle">
                     <div class="vertical-middle__inner">
                         <h2 class="site-block-title">
-                            HISTORY
+                            TIMELINE
                         </h2>
                         <p class="site-block-text">
                             Our universe is *only* about 14 billion years old, yet we had the privilege to meet you!
                         </p>
-                        <a href="history.html" class="hidden-link site-block-link pointer">
+                        <a href="timeline.html" class="hidden-link site-block-link pointer">
                             <span class="underline">Learn more</span>
                             <span class="material-icons">&#xe5c8;</span>
                         </a>
@@ -221,7 +224,8 @@
                 </div>
             </div>
             <div class="footer__to-top-container vertical-middle">
-                <a class="vertical-middle__inner footer__to-top-container__inner hidden-link material-icons bubble-hover" href="#top">&#xe5d8;</a>
+                <a class="vertical-middle__inner footer__to-top-container__inner hidden-link material-icons bubble-hover"
+                    href="#top">&#xe5d8;</a>
             </div>
         </footer>
     </div>

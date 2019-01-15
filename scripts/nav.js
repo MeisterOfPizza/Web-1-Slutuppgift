@@ -18,3 +18,14 @@ function expandNav() {
 
     navExpanded = !navExpanded;
 }
+
+//Collapse timeline node cards
+function collapseCard(id) {
+    var element = document.getElementById(id);
+
+    if (element.classList.contains("closed")) {
+        element.classList.remove("closed");
+    } else {
+        element.classList.add("closed");
+    }
+}

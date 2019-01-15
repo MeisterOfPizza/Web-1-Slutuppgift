@@ -41,6 +41,7 @@ footer {
 div.footer__to-top-container {
     float: right;
     margin-right: 10px;
+    vertical-align: middle;
 }
 
 a.footer__to-top-container__inner {
@@ -51,9 +52,10 @@ a.footer__to-top-container__inner {
 div.footer-notes {
     display: inline-block;
     margin-left: 10px;
-    height: 100%;
+    height: 75px;
     color: white;
     font-size: 20px;
+    vertical-align: middle;
 }
 
 /* animation helpers */
@@ -129,6 +131,10 @@ div.footer-notes {
     width: 100%;
 }
 
+.right {
+    float: right;
+}
+
 a.hidden-link {
     text-decoration: inherit;
     color: inherit;
@@ -161,6 +167,19 @@ a.anchor {
     background-position: center;
     background-size: cover;
     animation: fade-in 1s;
+}
+
+a.btn {
+    border-radius: 2px;
+    padding: 5px 30px;
+    font-size: 16px;
+    color: white;
+    background-color: white;
+    display: inline-block;
+}
+
+a.btn.blue {
+    background-color: #448cff;   
 }
 
 /* moving underline */
@@ -379,7 +398,7 @@ ul.index-aside__findme-container img {
 div.timeline-background {
     width: 90%;
     height: 1000px;
-    padding: 150px 0;
+    padding: 200px 0 400px 0;
 }
 
 div.timeline__time-node-wrapper {
@@ -405,7 +424,7 @@ div.timeline__time-node__inner {
 }
 
 div.timeline__time-node:not(:last-child) {
-    padding-bottom: 150px;
+    padding-bottom: 250px;
 }
 
 div.timeline__time-node:not(:last-child)::after {
@@ -421,15 +440,64 @@ div.timeline__time-node:not(:last-child)::after {
 
 div.timeline__time-node__card {
     width: 400px;
-    height: 300px;
+    padding: 15px;
     position: absolute;
     background-color: white;
     box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.5);
     top: 50px;
     left: 200px;
+    transition: all ease .1s;
+}
+
+div.timeline__time-node__card.closed {
+    /*display: none;*/
+    padding: 0;
+    width: 0px;
+    color: transparent;
+}
+
+div.timeline__time-node__card.closed div.timeline__time-node__card__date {
+    padding: 0;
+    width: 0;
+    height: 0;
+    color: transparent;
+}
+
+div.timeline__time-node__card.closed a.btn {
+    padding: 0;
+}
+
+div.timeline__time-node__card__date {
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-align: center;
+    color: white;
+    background-color: darkorchid;
+    padding: 10px 15px;
+    font-size: 16px;
+    transition: all ease .1s;
+}
+
+h2.timeline__time-node__card__title {
+    margin-top: 35px;
+    margin-bottom: 0px;
+}
+
+p.timeline__time-node__card__text {
+    margin-top: 5px;
 }
 
 div.timeline__time-node-wrapper div.timeline__time-node:nth-of-type(even) > div.timeline__time-node__card {
-    left: -450px;
+    left: auto;
     right: 200px;
+}
+
+div.timeline__time-node-wrapper div.timeline__time-node:nth-of-type(even) a.btn {
+    float: right;
+}
+
+div.timeline__time-node-wrapper div.timeline__time-node:nth-of-type(even) div.timeline__time-node__card__date {
+    right: 0;
+    left: auto;
 }

@@ -131,6 +131,10 @@ div.footer-notes {
     width: 100%;
 }
 
+.full-height-screen {
+    height: calc(100vh - 75px); /* Making space for footer */
+}
+
 .right {
     float: right;
 }
@@ -393,7 +397,7 @@ ul.index-aside__findme-container img {
     cursor: pointer;
 }
 
-/* timeline */
+/* timeline.html */
 
 div.timeline-background {
     width: 90%;
@@ -492,4 +496,31 @@ div.timeline__time-node-wrapper div.timeline__time-node:nth-of-type(even) a.btn 
 div.timeline__time-node-wrapper div.timeline__time-node:nth-of-type(even) div.timeline__time-node__card__date {
     right: 0;
     left: auto;
+}
+
+/* quotes.html */
+
+div.quotes-container {
+
+}
+
+h2.quotes-container__quote {
+    color: white;
+    font-size: 55px;
+}
+
+div.quotes-container__new-arrow {
+    border-left: 2px;
+    border-right: 2px;
+    border-top: 2px;
+    border-color: black;
+    display: inline-block;
+}
+
+div.quotes-container__new-arrow.left {
+    transform: rotate(45deg);
+}
+
+div.quotes-container__new-arrow.right {
+
 }

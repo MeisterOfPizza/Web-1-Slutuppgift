@@ -41,6 +41,7 @@ footer {
 div.footer__to-top-container {
     float: right;
     margin-right: 10px;
+    vertical-align: middle;
 }
 
 a.footer__to-top-container__inner {
@@ -51,9 +52,10 @@ a.footer__to-top-container__inner {
 div.footer-notes {
     display: inline-block;
     margin-left: 10px;
-    height: 100%;
+    height: 75px;
     color: white;
     font-size: 20px;
+    vertical-align: middle;
 }
 
 /* animation helpers */
@@ -129,6 +131,10 @@ div.footer-notes {
     width: 100%;
 }
 
+.right {
+    float: right;
+}
+
 a.hidden-link {
     text-decoration: inherit;
     color: inherit;
@@ -155,6 +161,25 @@ a.anchor {
 
 .bubble-hover:hover {
     transform: scale(1.05);
+}
+
+.background-img {
+    background-position: center;
+    background-size: cover;
+    animation: fade-in 1s;
+}
+
+a.btn {
+    border-radius: 2px;
+    padding: 5px 30px;
+    font-size: 16px;
+    color: white;
+    background-color: white;
+    display: inline-block;
+}
+
+a.btn.blue {
+    background-color: #448cff;   
 }
 
 /* moving underline */
@@ -250,7 +275,7 @@ nav.header-container__nav {
 ul.nav-list {
     list-style-type: none;
     margin: 0;
-    padding: 12.5px 0
+    padding: 12.5px 0;
 }
 
 ul.nav-list > li {
@@ -260,7 +285,7 @@ ul.nav-list > li {
     vertical-align: middle;
 }
 
-ul.nav-list > #burger {
+ul.nav-list > #nav-list-burger {
     display: none;
 }
 
@@ -293,6 +318,7 @@ section.site-block {
     width: 100%;
     height: 825px;
     border-bottom: 2px solid white;
+    filter: drop-shadow(0px 0px 10px);
 }
 
 h2.site-block-title {
@@ -314,13 +340,6 @@ a.site-block-link {
 
 a.site-block-link span {
     vertical-align: middle;
-}
-
-section.background-img {
-    background-position: center;
-    background-size: cover;
-    filter: drop-shadow(0px 0px 10px);
-    animation: fade-in 1s;
 }
 
 div.site-block__more-content-arrow {
@@ -372,4 +391,105 @@ ul.index-aside__findme-container img {
     height: 60px;
     width: 60px;
     cursor: pointer;
+}
+
+/* timeline */
+
+div.timeline-background {
+    width: 90%;
+    height: 1000px;
+    padding: 200px 0 400px 0;
+}
+
+div.timeline__time-node-wrapper {
+    height: auto;
+    width: 50%;
+}
+
+div.timeline__time-node {
+    width: 150px;
+    height: 150px;
+    z-index: 256;
+    position: relative;
+    margin: auto;
+}
+
+div.timeline__time-node__inner {
+    width: 150px;
+    height: 150px;
+    background-color: white;
+    background-position: center;
+    background-size: cover;
+    border-radius: 150px;
+}
+
+div.timeline__time-node:not(:last-child) {
+    padding-bottom: 250px;
+}
+
+div.timeline__time-node:not(:last-child)::after {
+    content: "";
+    background-color: white;
+    height: 100%;
+    width: 2px;
+    position: absolute;
+    top: 150px;
+    left: 75px;
+    z-index: 128;
+}
+
+div.timeline__time-node__card {
+    width: 400px;
+    padding: 15px;
+    position: absolute;
+    background-color: white;
+    box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.5);
+    top: 50px;
+    left: 200px;
+    animation: fade-in ease-in-out .5s;
+}
+
+div.timeline__time-node__card.closed {
+    display: none;
+}
+
+div.timeline__time-node__card * {
+    user-select: none; /* Disable user select, this is because of the selection being made upon opening and closing the card, might need a fix? WARNING */
+}
+
+div.timeline__time-node__card__date {
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-align: center;
+    color: white;
+    background-color: darkorchid;
+    padding: 10px 15px;
+    font-size: 16px;
+    transition: all ease .1s;
+}
+
+h2.timeline__time-node__card__title {
+    margin-top: 35px;
+    margin-bottom: 0px;
+}
+
+p.timeline__time-node__card__text {
+    margin-top: 5px;
+}
+
+/* handle cards on opposite sides */
+
+div.timeline__time-node-wrapper div.timeline__time-node:nth-of-type(even) > div.timeline__time-node__card {
+    left: auto;
+    right: 200px;
+}
+
+div.timeline__time-node-wrapper div.timeline__time-node:nth-of-type(even) a.btn {
+    float: right;
+}
+
+div.timeline__time-node-wrapper div.timeline__time-node:nth-of-type(even) div.timeline__time-node__card__date {
+    right: 0;
+    left: auto;
 }

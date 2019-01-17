@@ -7,6 +7,8 @@
     <link rel="stylesheet" type="text/css" href="../styles/light-theme.css">
 
     <script src="../scripts/nav.js"></script>
+    <script src="../data/quotes.js"></script>
+    <script src="../scripts/quotes.js"></script>
 </head>
 
 <body>
@@ -65,14 +67,15 @@
             <div class="background-img full-height-screen" style="background-image: url(../images/backgrounds/nebula-1.jpg)">
                 <div class="vertical-middle horizontal-middle">
                     <div class="vertical-middle__inner">
-                        <div class="quotes-container">
-                            <div class="quotes-container__new-arrow left">
-
-                            </div>
-                            <h2 class="quotes-container__quote"><q id="quote-text">Bla Bla Bla</q></h2>
-                            <div class="quotes-container__new-arrow right">
-
-                            </div>
+                        <div class="quotes-container horizontal-middle">
+                            <span class="quotes-container__new-arrow material-icons pointer" onclick="nextQuote(-1)">&#xe314;</span>
+                            <h2 class="quotes-container__quote">
+                                <q id="quote">That's one small step for <i>a</i> man, one giant leap for mankind.</q>
+                                <br />
+                                <p>-</p>
+                                <i id="quotee">Emil Engelin</i>
+                            </h2>
+                            <span class="quotes-container__new-arrow material-icons pointer" onclick="nextQuote(1)">&#xe315;</span>
                         </div>
                     </div>
                 </div>

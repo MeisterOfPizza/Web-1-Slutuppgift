@@ -1,6 +1,10 @@
 var quotes = JSON.parse(data);
 var quoteIndex = 0;
 
+document.addEventListener('DOMContentLoaded', function() {
+    nextQuote(0);
+});
+
 function nextQuote(move) {
     quoteIndex += move;
 

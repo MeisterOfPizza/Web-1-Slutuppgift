@@ -132,6 +132,10 @@ div.footer-notes {
 }
 
 .full-height-screen {
+    height: 100vh;
+}
+
+.full-height-screen--footer-adjust {
     height: calc(100vh - 75px); /* Making space for footer */
 }
 
@@ -376,7 +380,6 @@ aside.index-aside {
     top: 0;
     right: 0;
     width: 100%;
-    height: 850px;
     animation: fade-in 1.5s;
     z-index: 512;
 }
@@ -395,6 +398,51 @@ ul.index-aside__findme-container img {
     height: 60px;
     width: 60px;
     cursor: pointer;
+}
+
+/* facts.html */
+
+div.fact-container {
+    padding-top: 100px;
+    width: 100%
+}
+
+div.fact {
+    width: 100%;
+    filter: drop-shadow(0 0 10px);
+    border-bottom: white solid 2px;
+}
+
+div.fact__background {
+    position: absolute;
+    left:0;
+    width:100%;
+    height: 100%;
+    background-color: white;
+    z-index: -16;
+}
+
+div.fact__content {
+    padding: 10px 25px;
+    transition: margin-left ease-in-out .25s;
+    z-index: 16;
+}
+
+div.fact__content:hover {
+    margin-left: 10px;
+}
+
+h3.fact__title {
+    color: white;
+    font-size: 40px;
+    margin-top: 0;
+}
+
+p.fact__text {
+    color: white;
+    font-size: 25px;
+    margin-bottom: 0;
+    margin-right: 50px;
 }
 
 /* timeline.html */

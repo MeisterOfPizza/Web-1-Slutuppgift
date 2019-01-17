@@ -131,6 +131,10 @@ div.footer-notes {
     width: 100%;
 }
 
+.full-height-screen {
+    height: calc(100vh - 75px); /* Making space for footer */
+}
+
 .right {
     float: right;
 }
@@ -393,7 +397,7 @@ ul.index-aside__findme-container img {
     cursor: pointer;
 }
 
-/* timeline */
+/* timeline.html */
 
 div.timeline-background {
     width: 90%;
@@ -492,4 +496,37 @@ div.timeline__time-node-wrapper div.timeline__time-node:nth-of-type(even) a.btn 
 div.timeline__time-node-wrapper div.timeline__time-node:nth-of-type(even) div.timeline__time-node__card__date {
     right: 0;
     left: auto;
+}
+
+/* quotes.html */
+
+div.quotes-container {
+    text-align: center;
+    width: 80%;
+}
+
+h2.quotes-container__quote {
+    font-size: 55px;
+    color: white;
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+    max-width: 50%;
+    margin: 0 10px;
+}
+
+h2.quotes-container__quote * {
+    display: inline;
+}
+
+span.quotes-container__new-arrow {
+    font-size: 50px;
+    color: white;
+    vertical-align: middle;
+    border-radius: 50px;
+    transition: background-color ease-in-out .25s;
+}
+
+span.quotes-container__new-arrow:hover {
+    background-color: rgba(0, 0, 0, 0.5);
 }

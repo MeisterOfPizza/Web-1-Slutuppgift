@@ -446,25 +446,15 @@ div.timeline__time-node__card {
     box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.5);
     top: 50px;
     left: 200px;
-    transition: all ease .1s;
+    animation: fade-in ease-in-out .5s;
 }
 
 div.timeline__time-node__card.closed {
-    /*display: none;*/
-    padding: 0;
-    width: 0px;
-    color: transparent;
+    display: none;
 }
 
-div.timeline__time-node__card.closed div.timeline__time-node__card__date {
-    padding: 0;
-    width: 0;
-    height: 0;
-    color: transparent;
-}
-
-div.timeline__time-node__card.closed a.btn {
-    padding: 0;
+div.timeline__time-node__card * {
+    user-select: none; /* Disable user select, this is because of the selection being made upon opening and closing the card, might need a fix? WARNING */
 }
 
 div.timeline__time-node__card__date {
@@ -487,6 +477,8 @@ h2.timeline__time-node__card__title {
 p.timeline__time-node__card__text {
     margin-top: 5px;
 }
+
+/* handle cards on opposite sides */
 
 div.timeline__time-node-wrapper div.timeline__time-node:nth-of-type(even) > div.timeline__time-node__card {
     left: auto;

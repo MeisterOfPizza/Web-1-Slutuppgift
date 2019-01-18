@@ -403,39 +403,43 @@ ul.index-aside__findme-container img {
 /* facts.html */
 
 div.fact-container {
-    padding-top: 100px;
-    width: 100%
+    padding: 100px 0;
+    width: 100%;
 }
 
 div.fact {
-    width: 100%;
+    width: 75%;
+    margin: 0 auto 50px auto;
     filter: drop-shadow(0 0 10px);
-    border-bottom: white solid 2px;
 }
 
 div.fact__background {
     position: absolute;
-    left:0;
-    width:100%;
+    top: 0;
+    left: 0;
+    width: 0;
     height: 100%;
     background-color: white;
-    z-index: -16;
+    transition: width ease-in-out .1s;
 }
 
 div.fact__content {
     padding: 10px 25px;
-    transition: margin-left ease-in-out .25s;
-    z-index: 16;
 }
 
-div.fact__content:hover {
-    margin-left: 10px;
+div.fact__content:hover + div.fact__background {
+    width: 10px;
 }
 
 h3.fact__title {
     color: white;
     font-size: 40px;
     margin-top: 0;
+}
+
+span.fact__arrow {
+    color: white;
+    font-size: 25px;
 }
 
 p.fact__text {

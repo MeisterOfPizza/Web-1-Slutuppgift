@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
   setFactBgColor();
+  setFactIds();
 });
 
 function setFactBgColor() {
@@ -18,11 +19,23 @@ function getRandomColor() {
   return color;
 }
 
-function openFact(id) {
+function setFactIds() {
+  var facts = document.getElementsByClassName("fact");
+  var factContent = document.getElementsByClassName("fact__content");
+  var factArrows = document.getElementsByClassName("fact__arrow");
+
+  for (let i = 0; i < facts.length; i++) {
+    facts[i].onclick = openFact("fact-text-" + i, "fact-arrow-" + i);
+    factContent[i].id = "fact-text-" + i;
+    factArrows[i].id = "fact-arrow-" + i;
+  }
+}
+
+function openFact(id, arrowId) {
   var elem = document.getElementById(id, arrowId);
   var content = elem.firstElementChild;
 
-  document.getElementById(arrowId).innerHTML = elem.classList.contains("open") ? "&#xe5c7;" : "&#xe5c5;";
+  document.getElementById(arrowId).innerHTML = elem.classList.contains("open") ? "&#xe5c5;" : "&#xe5c7;";
 
   if (elem.classList.contains("open")) {
     elem.classList.remove("open");

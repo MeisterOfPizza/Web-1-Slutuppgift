@@ -441,8 +441,18 @@ h3.fact__title {
 p.fact__text {
     color: white;
     font-size: 25px;
-    margin-bottom: 0;
+    margin: 0;
+}
+
+div.fact__text__container {
+    overflow: hidden;
     margin-right: 50px;
+    max-height: 0;
+    transition: max-height 0.75s ease-in-out;
+}
+
+div.fact__text__container.open {
+    display: block;
 }
 
 /* timeline.html */

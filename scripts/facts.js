@@ -17,3 +17,20 @@ function getRandomColor() {
   }
   return color;
 }
+
+function openFact(id) {
+  var elem = document.getElementById(id, arrowId);
+  var content = elem.firstElementChild;
+
+  document.getElementById(arrowId).innerHTML = elem.classList.contains("open") ? "&#xe5c7;" : "&#xe5c5;";
+
+  if (elem.classList.contains("open")) {
+    elem.classList.remove("open");
+
+    elem.style.maxHeight = "0px";
+  } else {
+    elem.classList.add("open");
+
+    elem.style.maxHeight = content.scrollHeight + "px";
+  }
+}

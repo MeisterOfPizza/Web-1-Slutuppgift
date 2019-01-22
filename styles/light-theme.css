@@ -36,6 +36,7 @@ h1, h2, h3, h4, h5, h6 {
 footer {
     background-color: #333;
     height: 75px;
+    z-index: 8;
 }
 
 div.footer__to-top-container {
@@ -188,6 +189,13 @@ a.btn {
 
 a.btn.blue {
     background-color: #448cff;   
+}
+
+div.stuck-background {
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: -8;
 }
 
 /* moving underline */
@@ -403,7 +411,7 @@ ul.index-aside__findme-container img {
 /* facts.html */
 
 div.fact-container {
-    padding: 100px 0;
+    padding: 125px 0 25px 0px;
     width: 100%;
 }
 
@@ -440,6 +448,11 @@ h3.fact__title {
 span.fact__arrow {
     color: white;
     font-size: 25px;
+    transition: transform ease-in-out 0.75s;
+}
+
+span.fact__arrow.open {
+    transform: rotate(180deg);
 }
 
 p.fact__text {

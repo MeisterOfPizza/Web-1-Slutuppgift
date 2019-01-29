@@ -422,13 +422,14 @@ ul.index-aside__findme-container img {
 
 div.fact-container {
     padding: 125px 0 125px 0px;
-    width: 100%;
+    width: 75%;
 }
 
 div.fact {
-    width: 75%;
-    margin: 0 auto 50px auto;
+    width: 31%;
+    margin: 0 1% 50px 1%;
     filter: drop-shadow(0 0 10px);
+    display: inline-block;
 }
 
 div.fact__background {
@@ -526,6 +527,7 @@ div.timeline__time-node__inner {
     background-position: center;
     background-size: cover;
     border-radius: 150px;
+    z-index: 64;
 }
 
 div.timeline__time-node:not(:last-child) {
@@ -540,7 +542,7 @@ div.timeline__time-node:not(:last-child)::after {
     position: absolute;
     top: 150px;
     left: 75px;
-    z-index: 128;
+    z-index: -8;
 }
 
 div.timeline__time-node__card {
@@ -602,8 +604,12 @@ div.timeline__time-node-wrapper div.timeline__time-node:nth-of-type(even) div.ti
 /* quotes.html */
 
 div.quotes-container {
-    text-align: center;
     width: 80%;
+}
+
+div.quotes-container__inner {
+    text-align: center;
+    width: 100%;
 }
 
 h2.quotes-container__quote {
@@ -620,14 +626,15 @@ h2.quotes-container__quote * {
     display: inline;
 }
 
-span.quotes-container__new-arrow {
+span.quotes-container__next-arrow {
     font-size: 50px;
     color: white;
     vertical-align: middle;
     border-radius: 50px;
     transition: background-color ease-in-out .25s;
+    user-select: none;
 }
 
-span.quotes-container__new-arrow:hover {
+span.quotes-container__next-arrow:hover {
     background-color: rgba(0, 0, 0, 0.5);
 }

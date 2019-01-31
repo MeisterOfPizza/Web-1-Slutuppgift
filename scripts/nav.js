@@ -1,7 +1,7 @@
 var navExpanded = false; // Is the navbar expanded?
 
 /* Add or remove the header "flash" on scroll (if at the top of the page: remove flash) */
-window.addEventListener('scroll',function() {
+window.addEventListener('scroll', function() {
     if (window.scrollY == 0) {
         document.getElementById("header").classList.remove("site-top-bar-flash");
     } else {

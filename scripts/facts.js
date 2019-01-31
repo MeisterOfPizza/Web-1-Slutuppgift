@@ -37,8 +37,6 @@ function openFact(id, arrowId) {
   var elem = document.getElementById(id);
   var content = elem.firstElementChild;
 
-  //document.getElementById(arrowId).innerHTML = elem.classList.contains("open") ? "&#xe5c5;" : "&#xe5c7;";
-
   document.getElementById(arrowId).classList.toggle("open");
 
   if (elem.classList.contains("open")) {

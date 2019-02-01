@@ -384,7 +384,7 @@ div.site-block__more-content-arrow__inner {
     margin-top: -150px;
     border-radius: 50px;
     z-index: 512;
-    transition: margin-top 0.25s ease-in-out;
+    transition: margin-top 0.25s ease-in-out, transform 0.25s ease-in-out;
 }
 
 div.site-block__more-content-arrow__inner div {

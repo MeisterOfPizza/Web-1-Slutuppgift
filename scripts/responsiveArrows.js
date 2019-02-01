@@ -1,5 +1,7 @@
 var arrows;
 
+var anchors = [ "#top", "#facts", "#timeline", "#blog", "#quotes", "#about" ];
+
 //When the user scrolls, re evaluate the arrow positions.
 window.addEventListener("scroll", onScroll);
 
@@ -25,11 +27,22 @@ function onScroll() {
 
     //Every arrow that we've passed.
     for (let i = 0; i < Math.ceil(nBlocksPassed); i++) {
-        arrows[i].style.marginTop = -50 + "px";
+        arrows[i].style.marginTop = 50 + "px";
+        arrows[i].style.transform = "rotate(180deg)";
+        var test = arrows[i];
+        setArrowLinkHref(arrows[i].children[0].children[0], -1);
     }
 
     //Every arrow that we haven't passed / passed on our way up again.
     for (let i = arrows.length - 1; i > Math.floor(nBlocksPassed); i--) {
         arrows[i].style.marginTop = -150 + "px";
+        arrows[i].style.transform = "";
+        setArrowLinkHref(arrows[i].children[0].children[0], 1);
     }
+}
+
+function setArrowLinkHref(arrowLink, dir) {
+    index = anchors.indexOf(arrowLink.getAttribute("href"));
+    var n = Math.max(0, Math.min(index + dir, anchors.length - 1));
+    arrowLink.href = anchors[n];
 }

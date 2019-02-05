@@ -1,6 +1,14 @@
 var arrows;
 
-var anchors = [ "#top", "#facts", "#timeline", "#blog", "#quotes", "#about" ];
+var anchors =
+{
+    0: "#top",
+    1: "#facts",
+    2: "#timeline",
+    3: "#blog",
+    4: "#quotes",
+    5: "#about"
+};
 
 //When the user scrolls, re evaluate the arrow positions.
 window.addEventListener("scroll", onScroll);
@@ -15,7 +23,6 @@ function getAllArrows() {
 }
 
 function onScroll() {
-    
     //Getting the window height (Chrome)
     var windowHeight = document.documentElement.clientHeight;
     //Getting the scroll Y value.
@@ -29,20 +36,19 @@ function onScroll() {
     for (let i = 0; i < Math.ceil(nBlocksPassed); i++) {
         arrows[i].style.marginTop = 50 + "px";
         arrows[i].style.transform = "rotate(180deg)";
-        var test = arrows[i];
-        setArrowLinkHref(arrows[i].children[0].children[0], -1);
+        setArrowLinkHref(i, arrows[i].children[0].children[0], 0);
     }
 
     //Every arrow that we haven't passed / passed on our way up again.
     for (let i = arrows.length - 1; i > Math.floor(nBlocksPassed); i--) {
         arrows[i].style.marginTop = -150 + "px";
         arrows[i].style.transform = "";
-        setArrowLinkHref(arrows[i].children[0].children[0], 1);
+        setArrowLinkHref(i, arrows[i].children[0].children[0], 1);
     }
 }
 
-function setArrowLinkHref(arrowLink, dir) {
-    index = anchors.indexOf(arrowLink.getAttribute("href"));
-    var n = Math.max(0, Math.min(index + dir, anchors.length - 1));
-    arrowLink.href = anchors[n];
+function setArrowLinkHref(index, arrowLink, dir) {
+   var n = Math.max(0, Math.min(index + dir, Object.keys(anchors).length - 1)); //Get the index of the next anchor.
+
+   arrowLink.href = anchors[n]; //Apply the new anchor.
 }

@@ -427,16 +427,17 @@ ul.index-aside__findme-container img {
 
 div.fact-container {
     padding: 125px 0 125px 0px;
-    width: 75%;
+    width: 90%;
 }
 
 div.fact {
-    width: 31%;
+    width: 33%;
     margin: 0 1% 50px 1%;
     filter: drop-shadow(0 0 10px);
     display: inline-block;
 }
 
+/*
 div.fact__background {
     position: absolute;
     top: 0;
@@ -446,14 +447,17 @@ div.fact__background {
     background-color: white;
     transition: width ease-in-out .1s;
 }
+*/
 
 div.fact__content {
     padding: 10px 25px;
 }
 
+/*
 div.fact__content:hover + div.fact__background {
     width: 10px;
 }
+*/
 
 h3.fact__title {
     color: white;
@@ -495,14 +499,17 @@ div.fact__text > p {
 }
 
 div.fact__text__container {
+    /*
     overflow: hidden;
     max-height: 0;
     transition: max-height 0.75s ease-in-out;
+    */
 }
-
+/*
 div.fact__text__container.open {
     display: block;
 }
+*/
 
 /* timeline.html */
 

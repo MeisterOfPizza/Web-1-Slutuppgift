@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
-  setFactBgColor();
-  setFactIds();
+  //setFactBgColor();
+  //setFactIds();
 });
 
 function setFactBgColor() {

@@ -204,6 +204,23 @@ div.stuck-background {
     z-index: -8;
 }
 
+.parallax {
+    height: 100%; 
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* Turn off parallax scrolling for all tablets and phones. */
+@media only screen and (max-width: 1200px) {
+    .parallax {
+      background-attachment: scroll;
+    }
+  }
+
 /* moving underline */
 
 .moving-underline {
@@ -211,6 +228,7 @@ div.stuck-background {
     position: relative;
     overflow: hidden;
   }
+
   .moving-underline:after {
     height: 4px;
     width: 0;
@@ -229,6 +247,7 @@ div.stuck-background {
     transition-duration: 0.3s;
     transition-timing-function: ease-out;
   }
+
   .moving-underline:hover:after,
   .moving-underline:focus:after,
   .moving-underline:active:after {
@@ -463,6 +482,7 @@ h3.fact__title {
     color: white;
     font-size: 40px;
     margin-top: 0;
+    margin-bottom: 0;
 }
 
 span.fact__arrow {

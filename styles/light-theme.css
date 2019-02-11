@@ -205,7 +205,10 @@ div.stuck-background {
 }
 
 .parallax {
-    height: 100%; 
+    width: 100%;
+    padding: 75px 0;
+
+    background-color: black;
 
     /* Create the parallax scrolling effect */
     background-attachment: fixed;
@@ -445,91 +448,64 @@ ul.index-aside__findme-container img {
 /* facts.html */
 
 div.fact-container {
-    padding: 125px 0 125px 0px;
-    width: 90%;
+    padding-bottom: 75px;
+    width: 100%;
 }
 
 div.fact {
-    width: 33%;
-    margin: 0 1% 50px 1%;
-    filter: drop-shadow(0 0 10px);
-    display: inline-block;
+    max-width: 75%;
 }
 
-/*
-div.fact__background {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 0;
-    height: 100%;
-    background-color: white;
-    transition: width ease-in-out .1s;
-}
-*/
-
-div.fact__content {
-    padding: 10px 25px;
-}
-
-/*
-div.fact__content:hover + div.fact__background {
-    width: 10px;
-}
-*/
-
-h3.fact__title {
+p.fact__title {
     color: white;
     font-size: 40px;
     margin-top: 0;
-    margin-bottom: 0;
+    margin-bottom: 5px;
+    text-align: center;
+    overflow: hidden; /* To hide text line on side effect */
 }
 
-span.fact__arrow {
-    color: white;
-    font-size: 25px;
-    transition: transform ease-in-out 0.75s;
+/* To create --- TEXT --- styles */
+
+p.fact__title span {
+    position: relative;
+    display: inline-block;
 }
 
-span.fact__arrow.open {
-    transform: rotate(180deg);
+p.fact__title span:before, p.fact__title span:after {
+    content: "";
+    width: 300px;
+    height: 1px;
+    position: absolute;
+    top: 25px;
+    background-color: white;
+    animation: fact__title__line-on-sides--expand 2.5s ease-in-out;
 }
 
-div.fact__text {
+p.fact__title span:before {
+    right: 100%;
+    margin-right: 15px;
+}
+
+p.fact__title span:after {
+    left: 100%;
+    margin-left: 15px;
+}
+
+@keyframes fact__title__line-on-sides--expand {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 300px;
+    }
+}
+
+p.fact__text {
     color: white;
     font-size: 25px;
     margin: 0;
 }
-
-div.fact__text > img {
-    height: 250px;
-    float: left;
-    margin: 0 15px 15px 0;
-}
-
-div.fact__text > video {
-    height: 250px;
-    float: left;
-    margin: 0 15px 15px 0;
-}
-
-div.fact__text > p {
-    margin: 0;
-    text-align: justify;
-}
-
-div.fact__text__container {
-    /*
-    overflow: hidden;
-    max-height: 0;
-    transition: max-height 0.75s ease-in-out;
-    */
-}
-/*
-div.fact__text__container.open {
-    display: block;
-}
-*/
 
 /* timeline.html */
 

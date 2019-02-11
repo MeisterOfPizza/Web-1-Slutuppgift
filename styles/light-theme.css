@@ -36,6 +36,13 @@ h1, h2, h3, h4, h5, h6 {
 footer {
     background-color: #333;
     height: 75px;
+    z-index: 8;
+}
+
+footer.fixed {
+    bottom: 0;
+    position: fixed;
+    width: 100%;
 }
 
 div.footer__to-top-container {
@@ -132,6 +139,10 @@ div.footer-notes {
 }
 
 .full-height-screen {
+    height: 100vh;
+}
+
+.full-height-screen--footer-adjust {
     height: calc(100vh - 75px); /* Making space for footer */
 }
 
@@ -160,7 +171,7 @@ a.anchor {
 }
 
 .bubble-hover {
-    transition: all 0.1s ease-in-out;
+    transition: transform 0.1s ease-in-out;
 }
 
 .bubble-hover:hover {
@@ -186,6 +197,33 @@ a.btn.blue {
     background-color: #448cff;   
 }
 
+div.stuck-background {
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: -8;
+}
+
+.parallax {
+    width: 100%;
+    padding: 75px 0;
+
+    background-color: black;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* Turn off parallax scrolling for all tablets and phones. */
+@media only screen and (max-width: 1200px) {
+    .parallax {
+      background-attachment: scroll;
+    }
+  }
+
 /* moving underline */
 
 .moving-underline {
@@ -193,6 +231,7 @@ a.btn.blue {
     position: relative;
     overflow: hidden;
   }
+
   .moving-underline:after {
     height: 4px;
     width: 0;
@@ -211,6 +250,7 @@ a.btn.blue {
     transition-duration: 0.3s;
     transition-timing-function: ease-out;
   }
+
   .moving-underline:hover:after,
   .moving-underline:focus:after,
   .moving-underline:active:after {
@@ -320,9 +360,17 @@ ul.nav-list > #nav-list-burger {
 
 section.site-block {
     width: 100%;
-    height: 825px;
+    height: calc(100vh - 75px);
     border-bottom: 2px solid white;
     filter: drop-shadow(0px 0px 10px);
+}
+
+section.site-block.first {
+    padding-top: 75px;
+}
+
+div.site-block__inner {
+    margin: 0 50px;
 }
 
 h2.site-block-title {
@@ -355,9 +403,10 @@ div.site-block__more-content-arrow__inner {
     background-color: white;
     width: 100px;
     height: 100px;
-    margin-top: -50px;
+    margin-top: -150px;
     border-radius: 50px;
     z-index: 512;
+    transition: margin-top 0.25s ease-in-out, transform 0.25s ease-in-out;
 }
 
 div.site-block__more-content-arrow__inner div {
@@ -376,7 +425,6 @@ aside.index-aside {
     top: 0;
     right: 0;
     width: 100%;
-    height: 850px;
     animation: fade-in 1.5s;
     z-index: 512;
 }
@@ -395,6 +443,68 @@ ul.index-aside__findme-container img {
     height: 60px;
     width: 60px;
     cursor: pointer;
+}
+
+/* facts.html */
+
+div.fact-container {
+    padding-bottom: 75px;
+    width: 100%;
+}
+
+div.fact {
+    max-width: 75%;
+}
+
+p.fact__title {
+    color: white;
+    font-size: 40px;
+    margin-top: 0;
+    margin-bottom: 5px;
+    text-align: center;
+    overflow: hidden; /* To hide text line on side effect */
+}
+
+/* To create --- TEXT --- styles */
+
+p.fact__title span {
+    position: relative;
+    display: inline-block;
+}
+
+p.fact__title span:before, p.fact__title span:after {
+    content: "";
+    width: 300px;
+    height: 1px;
+    position: absolute;
+    top: 25px;
+    background-color: white;
+    animation: fact__title__line-on-sides--expand 2.5s ease-in-out;
+}
+
+p.fact__title span:before {
+    right: 100%;
+    margin-right: 15px;
+}
+
+p.fact__title span:after {
+    left: 100%;
+    margin-left: 15px;
+}
+
+@keyframes fact__title__line-on-sides--expand {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 300px;
+    }
+}
+
+p.fact__text {
+    color: white;
+    font-size: 25px;
+    margin: 0;
 }
 
 /* timeline.html */
@@ -425,6 +535,7 @@ div.timeline__time-node__inner {
     background-position: center;
     background-size: cover;
     border-radius: 150px;
+    z-index: 64;
 }
 
 div.timeline__time-node:not(:last-child) {
@@ -439,7 +550,7 @@ div.timeline__time-node:not(:last-child)::after {
     position: absolute;
     top: 150px;
     left: 75px;
-    z-index: 128;
+    z-index: -8;
 }
 
 div.timeline__time-node__card {
@@ -501,8 +612,12 @@ div.timeline__time-node-wrapper div.timeline__time-node:nth-of-type(even) div.ti
 /* quotes.html */
 
 div.quotes-container {
-    text-align: center;
     width: 80%;
+}
+
+div.quotes-container__inner {
+    text-align: center;
+    width: 100%;
 }
 
 h2.quotes-container__quote {
@@ -519,14 +634,15 @@ h2.quotes-container__quote * {
     display: inline;
 }
 
-span.quotes-container__new-arrow {
+span.quotes-container__next-arrow {
     font-size: 50px;
     color: white;
     vertical-align: middle;
     border-radius: 50px;
     transition: background-color ease-in-out .25s;
+    user-select: none;
 }
 
-span.quotes-container__new-arrow:hover {
+span.quotes-container__next-arrow:hover {
     background-color: rgba(0, 0, 0, 0.5);
 }

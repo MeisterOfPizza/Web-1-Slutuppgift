@@ -7,6 +7,7 @@
     <link rel="stylesheet" type="text/css" href="../styles/light-theme.css">
 
     <script src="../scripts/nav.js"></script>
+    <script src="../scripts/gallery.js"></script>
 </head>
 
 <body>
@@ -41,7 +42,7 @@
                         </li>
                         <li class="pointer">
                             <a class="hidden-link" href="gallery.html">
-                                <p class="moving-underline">GALLERY</p>
+                                <p class="moving-underline selected-link">GALLERY</p>
                             </a>
                         </li>
                         <li class="pointer">
@@ -51,7 +52,7 @@
                         </li>
                         <li class="pointer">
                             <a class="hidden-link" href="quotes.html">
-                                <p class="moving-underline selected-link">QUOTES</p>
+                                <p class="moving-underline">QUOTES</p>
                             </a>
                         </li>
                         <li class="pointer">
@@ -67,11 +68,691 @@
         </header>
 
         <main id="top">
-            <div style="margin-bottom: 75px">
-                <div>
-                    <div>
-                        <div>
-                            <img src="../images/backgrounds/moon-landing-1.jpg" />
+            <div class="parallax full-height-screen--footer-adjust"
+                style="padding: 0; background-image: url('../images/backgrounds/rocket-launch-2.jpg')">
+                <div class="horizontal-middle vertical-middle parallax-content">
+                    <div class="vertical-middle__inner">
+                        <h3 class="parallax-title">
+                            Welcome to the gallery!
+                        </h3>
+                        <p class="parallax-text">
+                            Here we show our most stunning photos, captured from around the internet.
+                            Everything here is royalty free, so go ahead and download some if you want to.
+                            <br />
+                            Remember to check out all the filters by clicking the buttons on the images. They can even
+                            be combined!
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="gallery-container">
+                <div class="gallery-container__row">
+                    <div class="gallery-container__column">
+                        <div class="gallery-item">
+                            <img class="gallery-item__img" src="../images/backgrounds/moon-landing-1.jpg" />
+                            <div class="gallery-item__action-bar">
+                                <a class="action tooltip bubble-hover">
+                                    <span class="material-icons">&#xe43b;</span>
+                                    <span class="tooltip-text">Hue Rotate</span>
+                                </a>
+                                <a class="action tooltip bubble-hover">
+                                    <span class="material-icons">&#xe43b;</span>
+                                    <span class="tooltip-text">Invert</span>
+                                </a>
+                                <a class="action tooltip bubble-hover">
+                                    <span class="material-icons">&#xe43b;</span>
+                                    <span class="tooltip-text">Saturate</span>
+                                </a>
+                                <a class="action tooltip bubble-hover">
+                                    <span class="material-icons">&#xe5d5;</span>
+                                    <span class="tooltip-text">Normal</span>
+                                </a>
+                                <a class="action tooltip bubble-hover">
+                                    <span class="material-icons">&#xe43b;</span>
+                                    <span class="tooltip-text">Grayscale</span>
+                                </a>
+                                <a class="action tooltip bubble-hover">
+                                    <span class="material-icons">&#xe43b;</span>
+                                    <span class="tooltip-text">Blur</span>
+                                </a>
+                                <a class="action tooltip bubble-hover">
+                                    <span class="material-icons">&#xe43b;</span>
+                                    <span class="tooltip-text">Sepia</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="gallery-item">
+                            <img class="gallery-item__img" src="../images/backgrounds/earth-1.jpg" />
+                            <div class="gallery-item__action-bar">
+                                <a class="action tooltip bubble-hover">
+                                    <span class="material-icons">&#xe43b;</span>
+                                    <span class="tooltip-text">Hue Rotate</span>
+                                </a>
+                                <a class="action tooltip bubble-hover">
+                                    <span class="material-icons">&#xe43b;</span>
+                                    <span class="tooltip-text">Invert</span>
+                                </a>
+                                <a class="action tooltip bubble-hover">
+                                    <span class="material-icons">&#xe43b;</span>
+                                    <span class="tooltip-text">Saturate</span>
+                                </a>
+                                <a class="action tooltip bubble-hover">
+                                    <span class="material-icons">&#xe5d5;</span>
+                                    <span class="tooltip-text">Normal</span>
+                                </a>
+                                <a class="action tooltip bubble-hover">
+                                    <span class="material-icons">&#xe43b;</span>
+                                    <span class="tooltip-text">Grayscale</span>
+                                </a>
+                                <a class="action tooltip bubble-hover">
+                                    <span class="material-icons">&#xe43b;</span>
+                                    <span class="tooltip-text">Blur</span>
+                                </a>
+                                <a class="action tooltip bubble-hover">
+                                    <span class="material-icons">&#xe43b;</span>
+                                    <span class="tooltip-text">Sepia</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="gallery-item">
+                            <img class="gallery-item__img" src="../images/backgrounds/nebula-1.jpg" />
+                            <div class="gallery-item__action-bar">
+                                <a class="action tooltip bubble-hover">
+                                    <span class="material-icons">&#xe43b;</span>
+                                    <span class="tooltip-text">Hue Rotate</span>
+                                </a>
+                                <a class="action tooltip bubble-hover">
+                                    <span class="material-icons">&#xe43b;</span>
+                                    <span class="tooltip-text">Invert</span>
+                                </a>
+                                <a class="action tooltip bubble-hover">
+                                    <span class="material-icons">&#xe43b;</span>
+                                    <span class="tooltip-text">Saturate</span>
+                                </a>
+                                <a class="action tooltip bubble-hover">
+                                    <span class="material-icons">&#xe5d5;</span>
+                                    <span class="tooltip-text">Normal</span>
+                                </a>
+                                <a class="action tooltip bubble-hover">
+                                    <span class="material-icons">&#xe43b;</span>
+                                    <span class="tooltip-text">Grayscale</span>
+                                </a>
+                                <a class="action tooltip bubble-hover">
+                                    <span class="material-icons">&#xe43b;</span>
+                                    <span class="tooltip-text">Blur</span>
+                                </a>
+                                <a class="action tooltip bubble-hover">
+                                    <span class="material-icons">&#xe43b;</span>
+                                    <span class="tooltip-text">Sepia</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="gallery-item">
+                            <img class="gallery-item__img" src="../images/backgrounds/earth-2.jpg" />
+                            <div class="gallery-item__action-bar">
+                                <a class="action tooltip bubble-hover">
+                                    <span class="material-icons">&#xe43b;</span>
+                                    <span class="tooltip-text">Hue Rotate</span>
+                                </a>
+                                <a class="action tooltip bubble-hover">
+                                    <span class="material-icons">&#xe43b;</span>
+                                    <span class="tooltip-text">Invert</span>
+                                </a>
+                                <a class="action tooltip bubble-hover">
+                                    <span class="material-icons">&#xe43b;</span>
+                                    <span class="tooltip-text">Saturate</span>
+                                </a>
+                                <a class="action tooltip bubble-hover">
+                                    <span class="material-icons">&#xe5d5;</span>
+                                    <span class="tooltip-text">Normal</span>
+                                </a>
+                                <a class="action tooltip bubble-hover">
+                                    <span class="material-icons">&#xe43b;</span>
+                                    <span class="tooltip-text">Grayscale</span>
+                                </a>
+                                <a class="action tooltip bubble-hover">
+                                    <span class="material-icons">&#xe43b;</span>
+                                    <span class="tooltip-text">Blur</span>
+                                </a>
+                                <a class="action tooltip bubble-hover">
+                                    <span class="material-icons">&#xe43b;</span>
+                                    <span class="tooltip-text">Sepia</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="gallery-item">
+                            <img class="gallery-item__img" src="../images/backgrounds/rocket-launch-2.jpg" />
+                            <div class="gallery-item__action-bar">
+                                <a class="action tooltip bubble-hover">
+                                    <span class="material-icons">&#xe43b;</span>
+                                    <span class="tooltip-text">Hue Rotate</span>
+                                </a>
+                                <a class="action tooltip bubble-hover">
+                                    <span class="material-icons">&#xe43b;</span>
+                                    <span class="tooltip-text">Invert</span>
+                                </a>
+                                <a class="action tooltip bubble-hover">
+                                    <span class="material-icons">&#xe43b;</span>
+                                    <span class="tooltip-text">Saturate</span>
+                                </a>
+                                <a class="action tooltip bubble-hover">
+                                    <span class="material-icons">&#xe5d5;</span>
+                                    <span class="tooltip-text">Normal</span>
+                                </a>
+                                <a class="action tooltip bubble-hover">
+                                    <span class="material-icons">&#xe43b;</span>
+                                    <span class="tooltip-text">Grayscale</span>
+                                </a>
+                                <a class="action tooltip bubble-hover">
+                                    <span class="material-icons">&#xe43b;</span>
+                                    <span class="tooltip-text">Blur</span>
+                                </a>
+                                <a class="action tooltip bubble-hover">
+                                    <span class="material-icons">&#xe43b;</span>
+                                    <span class="tooltip-text">Sepia</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gallery-container__column">
+                        <div class="gallery-item">
+                            <img class="gallery-item__img" src="../images/backgrounds/earth-1.jpg" />
+                            <div class="gallery-item__action-bar">
+                                <a class="action tooltip bubble-hover">
+                                    <span class="material-icons">&#xe43b;</span>
+                                    <span class="tooltip-text">Hue Rotate</span>
+                                </a>
+                                <a class="action tooltip bubble-hover">
+                                    <span class="material-icons">&#xe43b;</span>
+                                    <span class="tooltip-text">Invert</span>
+                                </a>
+                                <a class="action tooltip bubble-hover">
+                                    <span class="material-icons">&#xe43b;</span>
+                                    <span class="tooltip-text">Saturate</span>
+                                </a>
+                                <a class="action tooltip bubble-hover">
+                                    <span class="material-icons">&#xe5d5;</span>
+                                    <span class="tooltip-text">Normal</span>
+                                </a>
+                                <a class="action tooltip bubble-hover">
+                                    <span class="material-icons">&#xe43b;</span>
+                                    <span class="tooltip-text">Grayscale</span>
+                                </a>
+                                <a class="action tooltip bubble-hover">
+                                    <span class="material-icons">&#xe43b;</span>
+                                    <span class="tooltip-text">Blur</span>
+                                </a>
+                                <a class="action tooltip bubble-hover">
+                                    <span class="material-icons">&#xe43b;</span>
+                                    <span class="tooltip-text">Sepia</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="gallery-item">
+                            <img class="gallery-item__img" src="../images/backgrounds/nebula-1.jpg" />
+                            <div class="gallery-item__action-bar">
+                                <a class="action tooltip bubble-hover">
+                                    <span class="material-icons">&#xe43b;</span>
+                                    <span class="tooltip-text">Hue Rotate</span>
+                                </a>
+                                <a class="action tooltip bubble-hover">
+                                    <span class="material-icons">&#xe43b;</span>
+                                    <span class="tooltip-text">Invert</span>
+                                </a>
+                                <a class="action tooltip bubble-hover">
+                                    <span class="material-icons">&#xe43b;</span>
+                                    <span class="tooltip-text">Saturate</span>
+                                </a>
+                                <a class="action tooltip bubble-hover">
+                                    <span class="material-icons">&#xe5d5;</span>
+                                    <span class="tooltip-text">Normal</span>
+                                </a>
+                                <a class="action tooltip bubble-hover">
+                                    <span class="material-icons">&#xe43b;</span>
+                                    <span class="tooltip-text">Grayscale</span>
+                                </a>
+                                <a class="action tooltip bubble-hover">
+                                    <span class="material-icons">&#xe43b;</span>
+                                    <span class="tooltip-text">Blur</span>
+                                </a>
+                                <a class="action tooltip bubble-hover">
+                                    <span class="material-icons">&#xe43b;</span>
+                                    <span class="tooltip-text">Sepia</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="gallery-item">
+                            <img class="gallery-item__img" src="../images/backgrounds/moon-landing-1.jpg" />
+                            <div class="gallery-item__action-bar">
+                                <a class="action tooltip bubble-hover">
+                                    <span class="material-icons">&#xe43b;</span>
+                                    <span class="tooltip-text">Hue Rotate</span>
+                                </a>
+                                <a class="action tooltip bubble-hover">
+                                    <span class="material-icons">&#xe43b;</span>
+                                    <span class="tooltip-text">Invert</span>
+                                </a>
+                                <a class="action tooltip bubble-hover">
+                                    <span class="material-icons">&#xe43b;</span>
+                                    <span class="tooltip-text">Saturate</span>
+                                </a>
+                                <a class="action tooltip bubble-hover">
+                                    <span class="material-icons">&#xe5d5;</span>
+                                    <span class="tooltip-text">Normal</span>
+                                </a>
+                                <a class="action tooltip bubble-hover">
+                                    <span class="material-icons">&#xe43b;</span>
+                                    <span class="tooltip-text">Grayscale</span>
+                                </a>
+                                <a class="action tooltip bubble-hover">
+                                    <span class="material-icons">&#xe43b;</span>
+                                    <span class="tooltip-text">Blur</span>
+                                </a>
+                                <a class="action tooltip bubble-hover">
+                                    <span class="material-icons">&#xe43b;</span>
+                                    <span class="tooltip-text">Sepia</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="gallery-item">
+                            <img class="gallery-item__img" src="../images/backgrounds/space-1.jpg" />
+                            <div class="gallery-item__action-bar">
+                                <a class="action tooltip bubble-hover">
+                                    <span class="material-icons">&#xe43b;</span>
+                                    <span class="tooltip-text">Hue Rotate</span>
+                                </a>
+                                <a class="action tooltip bubble-hover">
+                                    <span class="material-icons">&#xe43b;</span>
+                                    <span class="tooltip-text">Invert</span>
+                                </a>
+                                <a class="action tooltip bubble-hover">
+                                    <span class="material-icons">&#xe43b;</span>
+                                    <span class="tooltip-text">Saturate</span>
+                                </a>
+                                <a class="action tooltip bubble-hover">
+                                    <span class="material-icons">&#xe5d5;</span>
+                                    <span class="tooltip-text">Normal</span>
+                                </a>
+                                <a class="action tooltip bubble-hover">
+                                    <span class="material-icons">&#xe43b;</span>
+                                    <span class="tooltip-text">Grayscale</span>
+                                </a>
+                                <a class="action tooltip bubble-hover">
+                                    <span class="material-icons">&#xe43b;</span>
+                                    <span class="tooltip-text">Blur</span>
+                                </a>
+                                <a class="action tooltip bubble-hover">
+                                    <span class="material-icons">&#xe43b;</span>
+                                    <span class="tooltip-text">Sepia</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="gallery-item">
+                            <img class="gallery-item__img" src="../images/backgrounds/earth-2.jpg" />
+                            <div class="gallery-item__action-bar">
+                                <a class="action tooltip bubble-hover">
+                                    <span class="material-icons">&#xe43b;</span>
+                                    <span class="tooltip-text">Hue Rotate</span>
+                                </a>
+                                <a class="action tooltip bubble-hover">
+                                    <span class="material-icons">&#xe43b;</span>
+                                    <span class="tooltip-text">Invert</span>
+                                </a>
+                                <a class="action tooltip bubble-hover">
+                                    <span class="material-icons">&#xe43b;</span>
+                                    <span class="tooltip-text">Saturate</span>
+                                </a>
+                                <a class="action tooltip bubble-hover">
+                                    <span class="material-icons">&#xe5d5;</span>
+                                    <span class="tooltip-text">Normal</span>
+                                </a>
+                                <a class="action tooltip bubble-hover">
+                                    <span class="material-icons">&#xe43b;</span>
+                                    <span class="tooltip-text">Grayscale</span>
+                                </a>
+                                <a class="action tooltip bubble-hover">
+                                    <span class="material-icons">&#xe43b;</span>
+                                    <span class="tooltip-text">Blur</span>
+                                </a>
+                                <a class="action tooltip bubble-hover">
+                                    <span class="material-icons">&#xe43b;</span>
+                                    <span class="tooltip-text">Sepia</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gallery-container__column">
+                        <div class="gallery-item">
+                            <img class="gallery-item__img" src="../images/backgrounds/spacewalk-1.jpg" />
+                            <div class="gallery-item__action-bar">
+                                <a class="action tooltip bubble-hover">
+                                    <span class="material-icons">&#xe43b;</span>
+                                    <span class="tooltip-text">Hue Rotate</span>
+                                </a>
+                                <a class="action tooltip bubble-hover">
+                                    <span class="material-icons">&#xe43b;</span>
+                                    <span class="tooltip-text">Invert</span>
+                                </a>
+                                <a class="action tooltip bubble-hover">
+                                    <span class="material-icons">&#xe43b;</span>
+                                    <span class="tooltip-text">Saturate</span>
+                                </a>
+                                <a class="action tooltip bubble-hover">
+                                    <span class="material-icons">&#xe5d5;</span>
+                                    <span class="tooltip-text">Normal</span>
+                                </a>
+                                <a class="action tooltip bubble-hover">
+                                    <span class="material-icons">&#xe43b;</span>
+                                    <span class="tooltip-text">Grayscale</span>
+                                </a>
+                                <a class="action tooltip bubble-hover">
+                                    <span class="material-icons">&#xe43b;</span>
+                                    <span class="tooltip-text">Blur</span>
+                                </a>
+                                <a class="action tooltip bubble-hover">
+                                    <span class="material-icons">&#xe43b;</span>
+                                    <span class="tooltip-text">Sepia</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="gallery-item">
+                            <img class="gallery-item__img" src="../images/backgrounds/moon-landing-1.jpg" />
+                            <div class="gallery-item__action-bar">
+                                <a class="action tooltip bubble-hover">
+                                    <span class="material-icons">&#xe43b;</span>
+                                    <span class="tooltip-text">Hue Rotate</span>
+                                </a>
+                                <a class="action tooltip bubble-hover">
+                                    <span class="material-icons">&#xe43b;</span>
+                                    <span class="tooltip-text">Invert</span>
+                                </a>
+                                <a class="action tooltip bubble-hover">
+                                    <span class="material-icons">&#xe43b;</span>
+                                    <span class="tooltip-text">Saturate</span>
+                                </a>
+                                <a class="action tooltip bubble-hover">
+                                    <span class="material-icons">&#xe5d5;</span>
+                                    <span class="tooltip-text">Normal</span>
+                                </a>
+                                <a class="action tooltip bubble-hover">
+                                    <span class="material-icons">&#xe43b;</span>
+                                    <span class="tooltip-text">Grayscale</span>
+                                </a>
+                                <a class="action tooltip bubble-hover">
+                                    <span class="material-icons">&#xe43b;</span>
+                                    <span class="tooltip-text">Blur</span>
+                                </a>
+                                <a class="action tooltip bubble-hover">
+                                    <span class="material-icons">&#xe43b;</span>
+                                    <span class="tooltip-text">Sepia</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="gallery-item">
+                            <img class="gallery-item__img" src="../images/backgrounds/sun-1.jpg" />
+                            <div class="gallery-item__action-bar">
+                                <a class="action tooltip bubble-hover">
+                                    <span class="material-icons">&#xe43b;</span>
+                                    <span class="tooltip-text">Hue Rotate</span>
+                                </a>
+                                <a class="action tooltip bubble-hover">
+                                    <span class="material-icons">&#xe43b;</span>
+                                    <span class="tooltip-text">Invert</span>
+                                </a>
+                                <a class="action tooltip bubble-hover">
+                                    <span class="material-icons">&#xe43b;</span>
+                                    <span class="tooltip-text">Saturate</span>
+                                </a>
+                                <a class="action tooltip bubble-hover">
+                                    <span class="material-icons">&#xe5d5;</span>
+                                    <span class="tooltip-text">Normal</span>
+                                </a>
+                                <a class="action tooltip bubble-hover">
+                                    <span class="material-icons">&#xe43b;</span>
+                                    <span class="tooltip-text">Grayscale</span>
+                                </a>
+                                <a class="action tooltip bubble-hover">
+                                    <span class="material-icons">&#xe43b;</span>
+                                    <span class="tooltip-text">Blur</span>
+                                </a>
+                                <a class="action tooltip bubble-hover">
+                                    <span class="material-icons">&#xe43b;</span>
+                                    <span class="tooltip-text">Sepia</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="gallery-item">
+                            <img class="gallery-item__img" src="../images/backgrounds/earth-3.jpg" />
+                            <div class="gallery-item__action-bar">
+                                <a class="action tooltip bubble-hover">
+                                    <span class="material-icons">&#xe43b;</span>
+                                    <span class="tooltip-text">Hue Rotate</span>
+                                </a>
+                                <a class="action tooltip bubble-hover">
+                                    <span class="material-icons">&#xe43b;</span>
+                                    <span class="tooltip-text">Invert</span>
+                                </a>
+                                <a class="action tooltip bubble-hover">
+                                    <span class="material-icons">&#xe43b;</span>
+                                    <span class="tooltip-text">Saturate</span>
+                                </a>
+                                <a class="action tooltip bubble-hover">
+                                    <span class="material-icons">&#xe5d5;</span>
+                                    <span class="tooltip-text">Normal</span>
+                                </a>
+                                <a class="action tooltip bubble-hover">
+                                    <span class="material-icons">&#xe43b;</span>
+                                    <span class="tooltip-text">Grayscale</span>
+                                </a>
+                                <a class="action tooltip bubble-hover">
+                                    <span class="material-icons">&#xe43b;</span>
+                                    <span class="tooltip-text">Blur</span>
+                                </a>
+                                <a class="action tooltip bubble-hover">
+                                    <span class="material-icons">&#xe43b;</span>
+                                    <span class="tooltip-text">Sepia</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="gallery-item">
+                            <img class="gallery-item__img" src="../images/backgrounds/rocket-launch-1.jpg" />
+                            <div class="gallery-item__action-bar">
+                                <a class="action tooltip bubble-hover">
+                                    <span class="material-icons">&#xe43b;</span>
+                                    <span class="tooltip-text">Hue Rotate</span>
+                                </a>
+                                <a class="action tooltip bubble-hover">
+                                    <span class="material-icons">&#xe43b;</span>
+                                    <span class="tooltip-text">Invert</span>
+                                </a>
+                                <a class="action tooltip bubble-hover">
+                                    <span class="material-icons">&#xe43b;</span>
+                                    <span class="tooltip-text">Saturate</span>
+                                </a>
+                                <a class="action tooltip bubble-hover">
+                                    <span class="material-icons">&#xe5d5;</span>
+                                    <span class="tooltip-text">Normal</span>
+                                </a>
+                                <a class="action tooltip bubble-hover">
+                                    <span class="material-icons">&#xe43b;</span>
+                                    <span class="tooltip-text">Grayscale</span>
+                                </a>
+                                <a class="action tooltip bubble-hover">
+                                    <span class="material-icons">&#xe43b;</span>
+                                    <span class="tooltip-text">Blur</span>
+                                </a>
+                                <a class="action tooltip bubble-hover">
+                                    <span class="material-icons">&#xe43b;</span>
+                                    <span class="tooltip-text">Sepia</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gallery-container__column">
+                        <div class="gallery-item">
+                            <img class="gallery-item__img" src="../images/backgrounds/sun-1.jpg" />
+                            <div class="gallery-item__action-bar">
+                                <a class="action tooltip bubble-hover">
+                                    <span class="material-icons">&#xe43b;</span>
+                                    <span class="tooltip-text">Hue Rotate</span>
+                                </a>
+                                <a class="action tooltip bubble-hover">
+                                    <span class="material-icons">&#xe43b;</span>
+                                    <span class="tooltip-text">Invert</span>
+                                </a>
+                                <a class="action tooltip bubble-hover">
+                                    <span class="material-icons">&#xe43b;</span>
+                                    <span class="tooltip-text">Saturate</span>
+                                </a>
+                                <a class="action tooltip bubble-hover">
+                                    <span class="material-icons">&#xe5d5;</span>
+                                    <span class="tooltip-text">Normal</span>
+                                </a>
+                                <a class="action tooltip bubble-hover">
+                                    <span class="material-icons">&#xe43b;</span>
+                                    <span class="tooltip-text">Grayscale</span>
+                                </a>
+                                <a class="action tooltip bubble-hover">
+                                    <span class="material-icons">&#xe43b;</span>
+                                    <span class="tooltip-text">Blur</span>
+                                </a>
+                                <a class="action tooltip bubble-hover">
+                                    <span class="material-icons">&#xe43b;</span>
+                                    <span class="tooltip-text">Sepia</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="gallery-item">
+                            <img class="gallery-item__img" src="../images/backgrounds/space-1.jpg" />
+                            <div class="gallery-item__action-bar">
+                                <a class="action tooltip bubble-hover">
+                                    <span class="material-icons">&#xe43b;</span>
+                                    <span class="tooltip-text">Hue Rotate</span>
+                                </a>
+                                <a class="action tooltip bubble-hover">
+                                    <span class="material-icons">&#xe43b;</span>
+                                    <span class="tooltip-text">Invert</span>
+                                </a>
+                                <a class="action tooltip bubble-hover">
+                                    <span class="material-icons">&#xe43b;</span>
+                                    <span class="tooltip-text">Saturate</span>
+                                </a>
+                                <a class="action tooltip bubble-hover">
+                                    <span class="material-icons">&#xe5d5;</span>
+                                    <span class="tooltip-text">Normal</span>
+                                </a>
+                                <a class="action tooltip bubble-hover">
+                                    <span class="material-icons">&#xe43b;</span>
+                                    <span class="tooltip-text">Grayscale</span>
+                                </a>
+                                <a class="action tooltip bubble-hover">
+                                    <span class="material-icons">&#xe43b;</span>
+                                    <span class="tooltip-text">Blur</span>
+                                </a>
+                                <a class="action tooltip bubble-hover">
+                                    <span class="material-icons">&#xe43b;</span>
+                                    <span class="tooltip-text">Sepia</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="gallery-item">
+                            <img class="gallery-item__img" src="../images/backgrounds/earth-3.jpg" />
+                            <div class="gallery-item__action-bar">
+                                <a class="action tooltip bubble-hover">
+                                    <span class="material-icons">&#xe43b;</span>
+                                    <span class="tooltip-text">Hue Rotate</span>
+                                </a>
+                                <a class="action tooltip bubble-hover">
+                                    <span class="material-icons">&#xe43b;</span>
+                                    <span class="tooltip-text">Invert</span>
+                                </a>
+                                <a class="action tooltip bubble-hover">
+                                    <span class="material-icons">&#xe43b;</span>
+                                    <span class="tooltip-text">Saturate</span>
+                                </a>
+                                <a class="action tooltip bubble-hover">
+                                    <span class="material-icons">&#xe5d5;</span>
+                                    <span class="tooltip-text">Normal</span>
+                                </a>
+                                <a class="action tooltip bubble-hover">
+                                    <span class="material-icons">&#xe43b;</span>
+                                    <span class="tooltip-text">Grayscale</span>
+                                </a>
+                                <a class="action tooltip bubble-hover">
+                                    <span class="material-icons">&#xe43b;</span>
+                                    <span class="tooltip-text">Blur</span>
+                                </a>
+                                <a class="action tooltip bubble-hover">
+                                    <span class="material-icons">&#xe43b;</span>
+                                    <span class="tooltip-text">Sepia</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="gallery-item">
+                            <img class="gallery-item__img" src="../images/backgrounds/nebula-1.jpg" />
+                            <div class="gallery-item__action-bar">
+                                <a class="action tooltip bubble-hover">
+                                    <span class="material-icons">&#xe43b;</span>
+                                    <span class="tooltip-text">Hue Rotate</span>
+                                </a>
+                                <a class="action tooltip bubble-hover">
+                                    <span class="material-icons">&#xe43b;</span>
+                                    <span class="tooltip-text">Invert</span>
+                                </a>
+                                <a class="action tooltip bubble-hover">
+                                    <span class="material-icons">&#xe43b;</span>
+                                    <span class="tooltip-text">Saturate</span>
+                                </a>
+                                <a class="action tooltip bubble-hover">
+                                    <span class="material-icons">&#xe5d5;</span>
+                                    <span class="tooltip-text">Normal</span>
+                                </a>
+                                <a class="action tooltip bubble-hover">
+                                    <span class="material-icons">&#xe43b;</span>
+                                    <span class="tooltip-text">Grayscale</span>
+                                </a>
+                                <a class="action tooltip bubble-hover">
+                                    <span class="material-icons">&#xe43b;</span>
+                                    <span class="tooltip-text">Blur</span>
+                                </a>
+                                <a class="action tooltip bubble-hover">
+                                    <span class="material-icons">&#xe43b;</span>
+                                    <span class="tooltip-text">Sepia</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="gallery-item">
+                            <img class="gallery-item__img" src="../images/backgrounds/earth-2.jpg" />
+                            <div class="gallery-item__action-bar">
+                                <a class="action tooltip bubble-hover">
+                                    <span class="material-icons">&#xe43b;</span>
+                                    <span class="tooltip-text">Hue Rotate</span>
+                                </a>
+                                <a class="action tooltip bubble-hover">
+                                    <span class="material-icons">&#xe43b;</span>
+                                    <span class="tooltip-text">Invert</span>
+                                </a>
+                                <a class="action tooltip bubble-hover">
+                                    <span class="material-icons">&#xe43b;</span>
+                                    <span class="tooltip-text">Saturate</span>
+                                </a>
+                                <a class="action tooltip bubble-hover">
+                                    <span class="material-icons">&#xe5d5;</span>
+                                    <span class="tooltip-text">Normal</span>
+                                </a>
+                                <a class="action tooltip bubble-hover">
+                                    <span class="material-icons">&#xe43b;</span>
+                                    <span class="tooltip-text">Grayscale</span>
+                                </a>
+                                <a class="action tooltip bubble-hover">
+                                    <span class="material-icons">&#xe43b;</span>
+                                    <span class="tooltip-text">Blur</span>
+                                </a>
+                                <a class="action tooltip bubble-hover">
+                                    <span class="material-icons">&#xe43b;</span>
+                                    <span class="tooltip-text">Sepia</span>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>

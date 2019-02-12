@@ -206,7 +206,7 @@ div.stuck-background {
 
 .parallax {
     width: 100%;
-    padding: 75px 0;
+    padding: 150px 0;
 
     background-color: black;
 
@@ -447,6 +447,19 @@ ul.index-aside__findme-container img {
 
 /* facts.html */
 
+div.fact--intro {
+    height: calc(100vh - 375px);
+}
+
+div.fact--intro div.fact {
+    background-color: transparent;
+}
+
+div.fact--intro div.fact p.fact__title {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5px;
+}
+
 div.fact-container {
     padding-bottom: 75px;
     width: 100%;
@@ -454,6 +467,8 @@ div.fact-container {
 
 div.fact {
     max-width: 75%;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5px;
 }
 
 p.fact__title {

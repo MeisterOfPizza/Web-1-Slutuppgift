@@ -2,15 +2,13 @@
 <html lang="en">
 
 <head>
-    <title>Blog</title>
+    <title>Timeline</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="UTF-8">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="../styles/light-theme.css">
 
     <script src="../scripts/nav.js"></script>
-    <script src="../data/quotes.js"></script>
-    <script src="../scripts/quotes.js"></script>
 </head>
 
 <body>
@@ -70,10 +68,79 @@
             </div>
         </header>
 
-        <main id="top">
-                                <img class="blog-item__thumbnail" alt="moon landing" src="../images/backgrounds/600x400/moon-landing-1-600x400.jpg" />
+        <div class="blog-page-container">
+            <main id="top" class="main-blogs">
+                <section class="blog-region">
+                    <h2 class="blog-region__title">Top</h2>
+                    <div class="blog-item-column">
+                        <article class="blog-item">
+                            <div class="blog-item__thumbnail-container">
+                                <img class="blog-item__thumbnail" alt="moon landing"
+                                    src="../images/backgrounds/600x400/rocket-launch-2-600x400.jpg" />
+                            </div>
+                            <div class="blog-item__tag-container">
+                                <div class="blog-item__tag --news">
+                                    <p>NEWS</p>
+                                </div>
+                                <div class="blog-item__tag --politics">
+                                    <p>POLITICS</p>
+                                </div>
+                            </div>
+                            <h3 class="blog-item__title">Title</h3>
+                            <div class="blog-item__info">
+                                <time datetime="yyyy-mm-dd" class="blog-item__info__posted">yyyy-mm-dd</time>
+                            </div>
+                        </article>
+                        <article class="blog-item">
+                            <div class="blog-item__thumbnail-container">
+                                <img class="blog-item__thumbnail" alt="moon landing"
+                                    src="../images/backgrounds/600x400/galaxy-1-600x400.jpg" />
+                            </div>
+                            <div class="blog-item__tag-container">
+                                <div class="blog-item__tag --technology">
+                                    <p>TECHNOLOGY</p>
+                                </div>
+                            </div>
+                            <h3 class="blog-item__title">Title</h3>
+                            <div class="blog-item__info">
+                                <time datetime="yyyy-mm-dd" class="blog-item__info__posted">yyyy-mm-dd</time>
+                            </div>
+                        </article>
+                    </div>
+                    <br />
+                    <a href="blog.html" class="hidden-link site-block-link pointer">
+                        <span class="underline">Find more</span>
+                        <span class="material-icons">&#xe5c8;</span>
+                    </a>
+                </section>
+                <br>
+                <section class="blog-region">
+                    <h2 class="blog-region__title">Recent</h2>
+                    <div class="blog-item-column">
 
-        </main>
+                    </div>
+                </section>
+            </main>
+
+            <aside class="aside-blogs">
+                <section class="blog-region">
+                    <h2 class="blog-region__title">Old but gold</h2>
+                    <div class="blog-item-column">
+                        <article class="blog-item">
+                            <div class="blog-item__tag-container">
+                                <div class="blog-item__tag --news">
+                                    <p>NEWS</p>
+                                </div>
+                            </div>
+                            <h3 class="blog-item__title">Title</h3>
+                            <div class="blog-item__info">
+                                <time datetime="yyyy-mm-dd" class="blog-item__info__posted">yyyy-mm-dd</time>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+            </aside>
+        </div>
 
         <footer class="fixed">
             <div class="footer-notes">

@@ -37,7 +37,7 @@ h1, h2, h3, h4, h5, h6 {
 footer {
     background-color: #333;
     height: 75px;
-    z-index: 8;
+    z-index: 256;
 }
 
 footer.fixed {
@@ -331,6 +331,7 @@ div.stuck-background {
 header.site-top-bar {
     display: table;
     position: fixed;
+    top: 0;
     color: white;
     width: 100%;
     height: 75px;
@@ -779,7 +780,7 @@ div.gallery-slideshow-container::before, div.gallery-slideshow-container::after 
     content: "";
     width: 100%;
     height: 1px;
-    background-color: #ff6701;
+    background-color: orangered;
     position: absolute;
 }
 
@@ -824,6 +825,123 @@ span.gallery-slideshow__next-arrow.--left {
 
 span.gallery-slideshow__next-arrow.--right {
     right: 5%;
+}
+
+/* blog.html */
+
+main.main-blogs {
+    width: 75%;
+    display: inline-block;
+}
+
+aside.aside-blogs {
+    width: 25%;
+    display: inline-block;
+    float: right;
+}
+
+/* Special case for aside blog items */
+
+aside.aside-blogs article.blog-item {
+    width: 100%;
+    margin-right: 0;
+}
+
+div.blog-page-container {
+    margin: 75px 0;
+    padding: 0 50px;
+}
+
+h2.blog-region__title {
+    color: orangered;
+    font-size: 40px;
+    margin: 10px 0;
+}
+
+div.blog-item-column {
+    width: 100%;
+}
+
+article.blog-item {
+    width: 600px;
+    display: inline-block;
+    color: white;
+    background-color: #151515;
+    margin-right: 15px;
+    margin-bottom: 15px;
+}
+
+div.blog-item__thumbnail-container {
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+}
+
+img.blog-item__thumbnail {
+    width: 100%;
+    height: 100%;
+    transition: transform ease-in-out 1s;
+    cursor: pointer;
+}
+
+img.blog-item__thumbnail:hover {
+    transform: scale(1.05);
+}
+
+div.blog-item__tag-container {
+    padding: 5px 15px;
+    margin-top: 15px;
+}
+
+/* Blog item tag */
+
+div.blog-item__tag {
+    color: white;
+    border-radius: 5px;
+    border: solid 2px white;
+    height: 25px;
+    min-width: 50px;
+    padding: 2px 25px;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+div.blog-item__tag > p {
+    font-size: 20px;
+    margin: 0;
+    text-align: center;
+}
+
+/* Types of tags */
+
+div.blog-item__tag.--news, div.blog-item__tag.--news p {
+    color: rgb(247, 45, 30);
+    border-color: rgb(247, 45, 30);
+}
+
+div.blog-item__tag.--technology, div.blog-item__tag.--technology p {
+    color: rgb(32, 240, 60);
+    border-color: rgb(32, 240, 60);
+}
+
+div.blog-item__tag.--politics, div.blog-item__tag.--politics p {
+    color: rgb(32, 129, 240);
+    border-color: rgb(32, 129, 240);
+}
+
+h3.blog-item__title {
+    font-size: 30px;
+    margin: 10px 15px;
+}
+
+div.blog-item__info {
+    height: 25px;
+    padding: 10px 15px;
+    padding-top: 0;
+}
+
+time.blog-item__info__posted {
+    font-size: 15px;
 }
 
 /* quotes.html */

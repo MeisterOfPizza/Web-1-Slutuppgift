@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
   //setFactIds();
 });
 
+/*
 function setFactBgColor() {
   var elems = document.getElementsByClassName("fact__background");
   for (let i = 0; i < elems.length; i++) {
@@ -49,3 +50,4 @@ function openFact(id, arrowId) {
     elem.style.maxHeight = content.scrollHeight + "px";
   }
 }
+*/

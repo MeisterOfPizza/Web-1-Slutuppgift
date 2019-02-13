@@ -780,7 +780,7 @@ div.quotes-container__inner {
     width: 100%;
 }
 
-h2.quotes-container__quote {
+div.quotes-container__quote {
     font-size: 55px;
     color: white;
     display: inline-block;
@@ -790,8 +790,9 @@ h2.quotes-container__quote {
     margin: 0 10px;
 }
 
-h2.quotes-container__quote * {
+div.quotes-container__quote * {
     display: inline;
+    margin: 0;
 }
 
 span.quotes-container__next-arrow {

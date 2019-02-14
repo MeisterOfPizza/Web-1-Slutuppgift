@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Supernova - Quotes</title>
+    <title>Supernova - About</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="UTF-8">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -44,10 +44,10 @@
                             <p class="moving-underline">BLOG</p>
                         </a>
                         <a class="hidden-link" href="quotes.html">
-                            <p class="moving-underline selected-link">QUOTES</p>
+                            <p class="moving-underline">QUOTES</p>
                         </a>
                         <a class="hidden-link" href="about.html">
-                            <p class="moving-underline">ABOUT</p>
+                            <p class="moving-underline selected-link">ABOUT</p>
                         </a>
                     </div>
                 </nav>
@@ -55,34 +55,38 @@
         </header>
 
         <main id="top">
-            <div class="background-img full-height-screen--footer-adjust"
-                style="background-image: url(../images/backgrounds/nebula-1.jpg)">
-                <div class="quotes-container vertical-middle horizontal-middle">
-                    <div class="vertical-middle__inner">
-                        <div class="quotes-container__inner horizontal-middle">
-                            <span class="quotes-container__next-arrow material-icons pointer"
-                                onclick="nextQuote(-1)">&#xe314;</span>
-                            <div class="quotes-container__quote">
-                                <q id="quote">Quote</q>
-                                <br />
-                                <p>-</p>
-                                <i id="quotee">Quotee</i>
-                            </div>
-                            <span class="quotes-container__next-arrow material-icons pointer"
-                                onclick="nextQuote(1)">&#xe315;</span>
-                        </div>
-                    </div>
-                </div>
+            <div class="about-container">
+                <h1 class="about-title">About</h1>
+                <h2 class="about-subtitle">Who is the owner and creator of Supernova?</h2>
+                <p class="about-text">
+                    The owner of <span class="about-text--highlight">Supernova</span>, Emil Engelin, has created this website to share what the beauties of space (and photo editing) can bring you!
+                </p>
+                <h2 class="about-subtitle">What is its purpose?</h2>
+                <p class="about-text">
+                    The spread <span class="about-text--highlight">joy</span> and <span class="about-text--highlight">happiness</span> of course! No hidden meanings here
+                </p>
+                <h2 class="about-subtitle">What can I do here?</h2>
+                <ul class="about-list">
+                    <li>Learn new things</li>
+                    <li>Find amazing pictures</li>
+                    <li>Get references for your work</li>
+                    <li>And so much more...</li>
+                </ul>
+                <h2 class="about-subtitle">Now go out there and find some new things!</h2>
             </div>
         </main>
 
-        <footer>
+        <footer class="fixed">
             <div class="footer-notes">
                 <div class="vertical-middle">
                     <div class="vertical-middle__inner">
                         <p>Copyright &copy; Emil Engelin 2019</p>
                     </div>
                 </div>
+            </div>
+            <div class="footer__to-top-container vertical-middle">
+                <a class="vertical-middle__inner footer__to-top-container__inner hidden-link material-icons bubble-hover"
+                    href="#top">&#xe5d8;</a>
             </div>
         </footer>
     </div>

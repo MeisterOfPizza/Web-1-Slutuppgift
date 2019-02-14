@@ -211,7 +211,7 @@ div.stuck-background {
 }
 
 /* Turn off parallax scrolling for all tablets and phones. */
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 1024px) {
     .parallax {
       background-attachment: scroll;
     }
@@ -219,6 +219,12 @@ div.stuck-background {
 
 .parallax div.parallax-content {
     background-color: transparent;
+}
+
+@media screen and (max-width: 400px) {
+    .parallax div.parallax-content {
+        padding-top: 75px;
+    }
 }
 
 .parallax .parallax-title {
@@ -350,6 +356,8 @@ header.site-top-bar::after {
 div.site-top-bar__inner {
     display: table-cell;
     vertical-align: middle;
+    position: relative;
+    width: 100%;
 }
 
 img.site-logo {
@@ -369,51 +377,61 @@ h1.site-name {
 div.header-container__logo-name {
     display: inline-block;
     margin-left: 100px;
+    position: absolute;
+    top: 13px;
 }
 
 nav.header-container__nav {
-    float: right;
     margin-right: 100px;
+    position: absolute;
+    top: 13px;
+    right: 0;
 }
 
-ul.nav-list {
-    list-style-type: none;
+@media screen and (max-width: 1024px) {
+    div.header-container__logo-name {
+        margin-left: 25px;
+    }
+
+    nav.header-container__nav {
+        margin-right: 25px;
+    }
+}
+
+div.nav-list {
     margin: 0;
     padding: 12.5px 0;
+    text-align: right;
 }
 
-ul.nav-list > li {
+div.nav-list > a {
     display: inline-block;
     margin-left: 35px;
     font-size: 19px;
     vertical-align: middle;
 }
 
-ul.nav-list > #nav-list-burger {
+div.nav-list > #nav-list-burger {
     display: none;
 }
 
-/* media */
-
-@media screen and (max-width: 1200px) {
-    ul.nav-list > li {
+@media screen and (max-width: 1024px) {
+    div.nav-list > a {
         display: none;
         margin-left: 0;
     }
 
-    ul.nav-list > #nav-list-vertical-line {
-        display: none !important;
-    }
-
-    ul.nav-list > #nav-list-burger {
+    div.nav-list > #nav-list-burger {
         display: block;
     }
 }
 
 /* expanding nav list */
 
-.nav-list--expanded > li {
+.nav-list--expanded > a {
     display: block !important;
+    margin-left: 0;
+    margin-bottom: 10px;
 }
 
 /* project-wide */
@@ -463,7 +481,7 @@ div.site-block__more-content-arrow {
     width: 100px;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 400px) {
     div.site-block__more-content-arrow {
         display: none;
     }
@@ -529,7 +547,7 @@ div.fact {
     padding: 5px;
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1024px) {
     div.fact {
         max-width: 100%;
         margin-left: 25px;
@@ -537,7 +555,7 @@ div.fact {
     }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 400px) {
     div.fact {
         margin-left: 0;
         margin-right: 0;
@@ -593,6 +611,18 @@ p.fact__text {
     color: white;
     font-size: 25px;
     margin: 0;
+}
+
+@media screen and (max-width: 1024px) {
+    p.fact__text {
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    p.fact__text {
+        font-size: 15px;
+    }
 }
 
 /* timeline.html */
@@ -725,7 +755,7 @@ div.gallery-container__column {
     margin-right: 0.125%;
 }
 
-@media screen and (max-width:1200px) {
+@media screen and (max-width: 1024px) {
     div.gallery-container__column {
         flex: 49.75%;
         max-width: 49.75%;
@@ -734,7 +764,7 @@ div.gallery-container__column {
     }
 }
 
-@media screen and (max-width:600px) {
+@media screen and (max-width: 400px) {
     div.gallery-container__column {
         flex: 100%;
         max-width: 100%;
@@ -870,7 +900,7 @@ div.blog-page-container {
     padding: 0 50px;
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1024px) {
     /* WARNING */
 }
 
@@ -966,7 +996,7 @@ time.blog-item__info__posted {
     font-size: 15px;
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1024px) {
     article.blog-item {
         width: 300px;
     }
@@ -1010,7 +1040,7 @@ div.quotes-container__quote {
     margin: 0 10px;
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1024px) {
     div.quotes-container {
         width: 100%;
     }
@@ -1020,7 +1050,7 @@ div.quotes-container__quote {
     }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 400px) {
     div.quotes-container__quote {
         font-size: 25px;
     }

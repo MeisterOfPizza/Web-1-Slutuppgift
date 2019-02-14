@@ -16,7 +16,7 @@
 <body>
     <div>
         <header id="header" class="site-top-bar">
-            <div class="site-top-bar__inner">
+            <div id="site-top-bar" class="site-top-bar__inner">
                 <div class="header-container__logo-name">
                     <a class="hidden-link" href="index.html">
                         <img class="site-logo" alt="logo" src="../images/logo/logo.png" />
@@ -24,63 +24,52 @@
                     <h1 class="site-name">NAME</h1>
                 </div>
                 <nav class="header-container__nav">
-                    <ul id="nav-list" class="nav-list">
-                        <li id="nav-list-burger">
+                    <div id="nav-list" class="nav-list">
+                        <a id="nav-list-burger">
                             <span class="material-icons pointer" onclick="expandNav()">&#xe5d2;</span>
-                        </li>
-                        <li class="pointer">
-                            <a class="hidden-link" href="index.html">
-                                <p class="moving-underline">HOME</p>
-                            </a>
-                        </li>
-                        <li class="pointer">
-                            <a class="hidden-link" href="facts.html">
-                                <p class="moving-underline">FACTS</p>
-                            </a>
-                        </li>
-                        <li class="pointer">
-                            <a class="hidden-link" href="timeline.html">
-                                <p class="moving-underline">TIMELINE</p>
-                            </a>
-                        </li>
-                        <li class="pointer">
-                            <a class="hidden-link" href="gallery.html">
-                                <p class="moving-underline">GALLERY</p>
-                            </a>
-                        </li>
-                        <li class="pointer">
-                            <a class="hidden-link" href="blog.html">
-                                <p class="moving-underline">BLOG</p>
-                            </a>
-                        </li>
-                        <li class="pointer">
-                            <a class="hidden-link" href="quotes.html">
-                                <p class="moving-underline selected-link">QUOTES</p>
-                            </a>
-                        </li>
-                        <li class="pointer">
-                            <a class="hidden-link" href="about.html">
-                                <p class="moving-underline">ABOUT</p>
-                            </a>
-                        </li>
-                    </ul>
+                        </a>
+                        <a class="hidden-link" href="index.html">
+                            <p class="moving-underline">HOME</p>
+                        </a>
+                        <a class="hidden-link" href="facts.html">
+                            <p class="moving-underline">FACTS</p>
+                        </a>
+                        <a class="hidden-link" href="timeline.html">
+                            <p class="moving-underline">TIMELINE</p>
+                        </a>
+                        <a class="hidden-link" href="gallery.html">
+                            <p class="moving-underline">GALLERY</p>
+                        </a>
+                        <a class="hidden-link" href="blog.html">
+                            <p class="moving-underline">BLOG</p>
+                        </a>
+                        <a class="hidden-link" href="quotes.html">
+                            <p class="moving-underline selected-link">QUOTES</p>
+                        </a>
+                        <a class="hidden-link" href="about.html">
+                            <p class="moving-underline">ABOUT</p>
+                        </a>
+                    </div>
                 </nav>
             </div>
         </header>
 
         <main id="top">
-            <div class="background-img full-height-screen--footer-adjust" style="background-image: url(../images/backgrounds/nebula-1.jpg)">
+            <div class="background-img full-height-screen--footer-adjust"
+                style="background-image: url(../images/backgrounds/nebula-1.jpg)">
                 <div class="quotes-container vertical-middle horizontal-middle">
                     <div class="vertical-middle__inner">
                         <div class="quotes-container__inner horizontal-middle">
-                            <span class="quotes-container__next-arrow material-icons pointer" onclick="nextQuote(-1)">&#xe314;</span>
+                            <span class="quotes-container__next-arrow material-icons pointer"
+                                onclick="nextQuote(-1)">&#xe314;</span>
                             <div class="quotes-container__quote">
                                 <q id="quote">Quote</q>
                                 <br />
                                 <p>-</p>
                                 <i id="quotee">Quotee</i>
                             </div>
-                            <span class="quotes-container__next-arrow material-icons pointer" onclick="nextQuote(1)">&#xe315;</span>
+                            <span class="quotes-container__next-arrow material-icons pointer"
+                                onclick="nextQuote(1)">&#xe315;</span>
                         </div>
                     </div>
                 </div>

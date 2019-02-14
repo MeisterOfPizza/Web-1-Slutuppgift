@@ -245,6 +245,16 @@ div.stuck-background {
     text-align: center;
 }
 
+@media screen and (max-width: 1024px) {
+    .parallax .parallax-title {
+        font-size: 25px;
+    }
+
+    .parallax .parallax-text {
+        font-size: 15px;
+    }
+}
+
 /* moving underline */
 
 .moving-underline {

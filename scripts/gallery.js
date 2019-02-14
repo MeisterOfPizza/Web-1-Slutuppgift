@@ -51,7 +51,7 @@ function setFilter(id, filter, actionId) {
         document.getElementById(actionId).children[0].style.color = "white"; //Make the icon white (default).
     } else {
         style += filter; //Add filter
-        document.getElementById(actionId).children[0].style.color = "#ff6701"; //Give the icon a nice orange tint.
+        document.getElementById(actionId).children[0].style.color = "rgba(255, 69, 0)"; //Give the icon a nice orange tint. In CSS, known as "orangered".
     }
 
     img.style = "filter: " + style;

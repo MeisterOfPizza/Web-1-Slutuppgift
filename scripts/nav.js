@@ -11,9 +11,11 @@ window.addEventListener('scroll', function() {
 
 function expandNav() {
     if (!navExpanded) {
-        document.getElementById("nav-list").classList.add("nav-list--expanded");        
+        document.getElementById("nav-list").classList.add("nav-list--expanded");
+        document.getElementById("site-top-bar").style = "height: 310px; background-color: #333;";
     } else {
         document.getElementById("nav-list").classList.remove("nav-list--expanded");
+        document.getElementById("site-top-bar").style = "";
     }
 
     navExpanded = !navExpanded;

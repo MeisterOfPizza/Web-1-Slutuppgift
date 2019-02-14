@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Timeline</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../styles/light-theme.css">
+
+    <script src="../scripts/nav.js"></script>
+</head>
+
+<body>
+    <div>
+        <header id="header" class="site-top-bar">
+            <div id="site-top-bar" class="site-top-bar__inner">
+                <div class="header-container__logo-name">
+                    <a class="hidden-link" href="index.html">
+                        <img class="site-logo" alt="logo" src="../images/logo/logo.png" />
+                    </a>
+                    <h1 class="site-name">NAME</h1>
+                </div>
+                <nav class="header-container__nav">
+                    <div id="nav-list" class="nav-list">
+                        <a id="nav-list-burger">
+                            <span class="material-icons pointer" onclick="expandNav()">&#xe5d2;</span>
+                        </a>
+                        <a class="hidden-link" href="index.html">
+                            <p class="moving-underline">HOME</p>
+                        </a>
+                        <a class="hidden-link" href="facts.html">
+                            <p class="moving-underline">FACTS</p>
+                        </a>
+                        <a class="hidden-link" href="timeline.html">
+                            <p class="moving-underline">TIMELINE</p>
+                        </a>
+                        <a class="hidden-link" href="gallery.html">
+                            <p class="moving-underline">GALLERY</p>
+                        </a>
+                        <a class="hidden-link" href="blog.html">
+                            <p class="moving-underline selected-link">BLOG</p>
+                        </a>
+                        <a class="hidden-link" href="quotes.html">
+                            <p class="moving-underline">QUOTES</p>
+                        </a>
+                        <a class="hidden-link" href="about.html">
+                            <p class="moving-underline">ABOUT</p>
+                        </a>
+                    </div>
+                </nav>
+            </div>
+        </header>
+
+        <div class="blog-page-container">
+            <main id="top" class="main-blogs">
+                <section class="blog-region">
+                    <h2 class="blog-region__title">Top</h2>
+                    <div class="blog-item-column">
+                        <article class="blog-item">
+                            <div class="blog-item__thumbnail-container">
+                                <img class="blog-item__thumbnail" alt="moon landing"
+                                    src="../images/backgrounds/600x400/rocket-launch-2-600x400.jpg" />
+                            </div>
+                            <div class="blog-item__tag-container">
+                                <div class="blog-item__tag --news">
+                                    <p>NEWS</p>
+                                </div>
+                                <div class="blog-item__tag --politics">
+                                    <p>POLITICS</p>
+                                </div>
+                            </div>
+                            <h3 class="blog-item__title">Title</h3>
+                            <div class="blog-item__info">
+                                <time datetime="yyyy-mm-dd" class="blog-item__info__posted">yyyy-mm-dd</time>
+                            </div>
+                        </article>
+                        <article class="blog-item">
+                            <div class="blog-item__thumbnail-container">
+                                <img class="blog-item__thumbnail" alt="moon landing"
+                                    src="../images/backgrounds/600x400/galaxy-1-600x400.jpg" />
+                            </div>
+                            <div class="blog-item__tag-container">
+                                <div class="blog-item__tag --technology">
+                                    <p>TECHNOLOGY</p>
+                                </div>
+                            </div>
+                            <h3 class="blog-item__title">Title</h3>
+                            <div class="blog-item__info">
+                                <time datetime="yyyy-mm-dd" class="blog-item__info__posted">yyyy-mm-dd</time>
+                            </div>
+                        </article>
+                    </div>
+                    <br />
+                    <a href="blog.html" class="hidden-link site-block-link pointer">
+                        <span class="underline">Find more</span>
+                        <span class="material-icons">&#xe5c8;</span>
+                    </a>
+                </section>
+                <br>
+                <section class="blog-region">
+                    <h2 class="blog-region__title">Recent</h2>
+                    <div class="blog-item-column">
+
+                    </div>
+                </section>
+            </main>
+
+            <aside class="aside-blogs">
+                <section class="blog-region">
+                    <h2 class="blog-region__title">Old but gold</h2>
+                    <div class="blog-item-column">
+                        <article class="blog-item">
+                            <div class="blog-item__tag-container">
+                                <div class="blog-item__tag --news">
+                                    <p>NEWS</p>
+                                </div>
+                            </div>
+                            <h3 class="blog-item__title">Title</h3>
+                            <div class="blog-item__info">
+                                <time datetime="yyyy-mm-dd" class="blog-item__info__posted">yyyy-mm-dd</time>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+            </aside>
+        </div>
+
+        <footer class="fixed">
+            <div class="footer-notes">
+                <div class="vertical-middle">
+                    <div class="vertical-middle__inner">
+                        <p>Copyright &copy; Emil Engelin 2019</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__to-top-container vertical-middle">
+                <a class="vertical-middle__inner footer__to-top-container__inner hidden-link material-icons bubble-hover"
+                    href="#top">&#xe5d8;</a>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>

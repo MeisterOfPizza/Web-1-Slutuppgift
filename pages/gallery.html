@@ -16,7 +16,7 @@
 <body>
     <div>
         <header id="header" class="site-top-bar">
-            <div class="site-top-bar__inner">
+            <div id="site-top-bar" class="site-top-bar__inner">
                 <div class="header-container__logo-name">
                     <a class="hidden-link" href="index.html">
                         <img class="site-logo" alt="logo" src="../images/logo/logo.png" />
@@ -24,48 +24,32 @@
                     <h1 class="site-name">NAME</h1>
                 </div>
                 <nav class="header-container__nav">
-                    <ul id="nav-list" class="nav-list">
-                        <li id="nav-list-burger">
+                    <div id="nav-list" class="nav-list">
+                        <a id="nav-list-burger">
                             <span class="material-icons pointer" onclick="expandNav()">&#xe5d2;</span>
-                        </li>
-                        <li class="pointer">
-                            <a class="hidden-link" href="index.html">
-                                <p class="moving-underline">HOME</p>
-                            </a>
-                        </li>
-                        <li class="pointer">
-                            <a class="hidden-link" href="facts.html">
-                                <p class="moving-underline">FACTS</p>
-                            </a>
-                        </li>
-                        <li class="pointer">
-                            <a class="hidden-link" href="timeline.html">
-                                <p class="moving-underline">TIMELINE</p>
-                            </a>
-                        </li>
-                        <li class="pointer">
-                            <a class="hidden-link" href="gallery.html">
-                                <p class="moving-underline selected-link">GALLERY</p>
-                            </a>
-                        </li>
-                        <li class="pointer">
-                            <a class="hidden-link" href="blog.html">
-                                <p class="moving-underline">BLOG</p>
-                            </a>
-                        </li>
-                        <li class="pointer">
-                            <a class="hidden-link" href="quotes.html">
-                                <p class="moving-underline">QUOTES</p>
-                            </a>
-                        </li>
-                        <li class="pointer">
-                            <a class="hidden-link" href="about.html">
-                                <p class="moving-underline">ABOUT</p>
-                            </a>
-                        </li>
-                        <li id="nav-list-vertical-line" class="vertical-line-after" style="height: 25px"></li>
-                        <li class="material-icons pointer">&#xe8b6;</li>
-                    </ul>
+                        </a>
+                        <a class="hidden-link" href="index.html">
+                            <p class="moving-underline">HOME</p>
+                        </a>
+                        <a class="hidden-link" href="facts.html">
+                            <p class="moving-underline">FACTS</p>
+                        </a>
+                        <a class="hidden-link" href="timeline.html">
+                            <p class="moving-underline">TIMELINE</p>
+                        </a>
+                        <a class="hidden-link" href="gallery.html">
+                            <p class="moving-underline selected-link">GALLERY</p>
+                        </a>
+                        <a class="hidden-link" href="blog.html">
+                            <p class="moving-underline">BLOG</p>
+                        </a>
+                        <a class="hidden-link" href="quotes.html">
+                            <p class="moving-underline">QUOTES</p>
+                        </a>
+                        <a class="hidden-link" href="about.html">
+                            <p class="moving-underline">ABOUT</p>
+                        </a>
+                    </div>
                 </nav>
             </div>
         </header>
@@ -328,7 +312,7 @@
                         </div>
                         <div class="gallery-item">
                             <img class="gallery-item__img" alt="rocket launch"
-                                src="../images/backgrounds/moon-landing-1.jpg" />
+                                src="../images/backgrounds/galaxy-1.jpg" />
                             <div class="gallery-item__action-bar">
                                 <a class="action tooltip bubble-hover">
                                     <span class="material-icons">&#xe43b;</span>
@@ -394,7 +378,7 @@
                             </div>
                         </div>
                         <div class="gallery-item">
-                            <img class="gallery-item__img" alt="earth" src="../images/backgrounds/earth-2.jpg" />
+                            <img class="gallery-item__img" alt="earth" src="../images/backgrounds/galaxy-1.jpg" />
                             <div class="gallery-item__action-bar">
                                 <a class="action tooltip bubble-hover">
                                     <span class="material-icons">&#xe43b;</span>
@@ -774,9 +758,11 @@
                         src="../images/backgrounds/1920x1080/nebula-1-1920x1080.jpg" />
                     <img id="slideshow_img_2" class="gallery-slideshow__img" style="display:none" alt="spacewalk"
                         src="../images/backgrounds/1920x1080/spacewalk-1-1920x1080.jpg" />
-                    
-                    <span class="gallery-slideshow__next-arrow --left material-icons pointer" onclick="nextSlideshow(-1)">&#xe314;</span>
-                    <span class="gallery-slideshow__next-arrow --right material-icons pointer" onclick="nextSlideshow(1)">&#xe315;</span>
+
+                    <span class="gallery-slideshow__next-arrow --left material-icons pointer"
+                        onclick="nextSlideshow(-1)">&#xe314;</span>
+                    <span class="gallery-slideshow__next-arrow --right material-icons pointer"
+                        onclick="nextSlideshow(1)">&#xe315;</span>
                 </div>
             </div>
             <div class="gallery-container">
@@ -784,7 +770,7 @@
                     <div class="gallery-container__column">
                         <div class="gallery-item">
                             <img class="gallery-item__img" alt="moon landing"
-                                src="../images/backgrounds/moon-landing-1.jpg" />
+                                src="../images/backgrounds/galaxy-1.jpg" />
                             <div class="gallery-item__action-bar">
                                 <a class="action tooltip bubble-hover">
                                     <span class="material-icons">&#xe43b;</span>
@@ -952,7 +938,7 @@
                     </div>
                     <div class="gallery-container__column">
                         <div class="gallery-item">
-                            <img class="gallery-item__img" alt="earth" src="../images/backgrounds/earth-1.jpg" />
+                            <img class="gallery-item__img" alt="earth" src="../images/backgrounds/earth-3.jpg" />
                             <div class="gallery-item__action-bar">
                                 <a class="action tooltip bubble-hover">
                                     <span class="material-icons">&#xe43b;</span>
@@ -1422,7 +1408,7 @@
                             </div>
                         </div>
                         <div class="gallery-item">
-                            <img class="gallery-item__img" alt="earth" src="../images/backgrounds/earth-2.jpg" />
+                            <img class="gallery-item__img" alt="earth" src="../images/backgrounds/galaxy-1.jpg" />
                             <div class="gallery-item__action-bar">
                                 <a class="action tooltip bubble-hover">
                                     <span class="material-icons">&#xe43b;</span>

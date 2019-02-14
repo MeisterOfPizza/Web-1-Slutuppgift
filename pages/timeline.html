@@ -14,7 +14,7 @@
 <body>
     <div>
         <header id="header" class="site-top-bar">
-            <div class="site-top-bar__inner">
+            <div id="site-top-bar" class="site-top-bar__inner">
                 <div class="header-container__logo-name">
                     <a class="hidden-link" href="index.html">
                         <img class="site-logo" alt="logo" src="../images/logo/logo.png" />
@@ -22,60 +22,46 @@
                     <h1 class="site-name">NAME</h1>
                 </div>
                 <nav class="header-container__nav">
-                    <ul id="nav-list" class="nav-list">
-                        <li id="nav-list-burger">
+                    <div id="nav-list" class="nav-list">
+                        <a id="nav-list-burger">
                             <span class="material-icons pointer" onclick="expandNav()">&#xe5d2;</span>
-                        </li>
-                        <li class="pointer">
-                            <a class="hidden-link" href="index.html">
-                                <p class="moving-underline">HOME</p>
-                            </a>
-                        </li>
-                        <li class="pointer">
-                            <a class="hidden-link" href="facts.html">
-                                <p class="moving-underline">FACTS</p>
-                            </a>
-                        </li>
-                        <li class="pointer">
-                            <a class="hidden-link" href="timeline.html">
-                                <p class="moving-underline selected-link">TIMELINE</p>
-                            </a>
-                        </li>
-                        <li class="pointer">
-                            <a class="hidden-link" href="gallery.html">
-                                <p class="moving-underline">GALLERY</p>
-                            </a>
-                        </li>
-                        <li class="pointer">
-                            <a class="hidden-link" href="blog.html">
-                                <p class="moving-underline">BLOG</p>
-                            </a>
-                        </li>
-                        <li class="pointer">
-                            <a class="hidden-link" href="quotes.html">
-                                <p class="moving-underline">QUOTES</p>
-                            </a>
-                        </li>
-                        <li class="pointer">
-                            <a class="hidden-link" href="about.html">
-                                <p class="moving-underline">ABOUT</p>
-                            </a>
-                        </li>
-                        <li id="nav-list-vertical-line" class="vertical-line-after" style="height: 25px"></li>
-                        <li class="material-icons pointer">&#xe8b6;</li>
-                    </ul>
+                        </a>
+                        <a class="hidden-link" href="index.html">
+                            <p class="moving-underline">HOME</p>
+                        </a>
+                        <a class="hidden-link" href="facts.html">
+                            <p class="moving-underline">FACTS</p>
+                        </a>
+                        <a class="hidden-link" href="timeline.html">
+                            <p class="moving-underline selected-link">TIMELINE</p>
+                        </a>
+                        <a class="hidden-link" href="gallery.html">
+                            <p class="moving-underline">GALLERY</p>
+                        </a>
+                        <a class="hidden-link" href="blog.html">
+                            <p class="moving-underline">BLOG</p>
+                        </a>
+                        <a class="hidden-link" href="quotes.html">
+                            <p class="moving-underline">QUOTES</p>
+                        </a>
+                        <a class="hidden-link" href="about.html">
+                            <p class="moving-underline">ABOUT</p>
+                        </a>
+                    </div>
                 </nav>
             </div>
         </header>
 
+        <div class="background-img full-height-screen stuck-background"
+            style="background-image: url(../images/backgrounds/nebula-1.jpg)"></div>
+
         <main id="top">
-            <div class="background-img full-height-screen stuck-background" style="background-image: url(../images/backgrounds/nebula-1.jpg)">
-            </div>
             <div class="timeline-background vertical-middle horizontal-middle">
                 <div class="vertical-middle__inner">
                     <div class="timeline__time-node-wrapper horizontal-middle">
                         <div class="timeline__time-node">
-                            <div onclick="collapseCard('card-1')" class="timeline__time-node__inner bubble-hover" style="background-image: url(../images/backgrounds/moon-landing-1.jpg)"></div>
+                            <div onclick="collapseCard('card-1')" class="timeline__time-node__inner bubble-hover"
+                                style="background-image: url(../images/backgrounds/moon-landing-1.jpg)"></div>
                             <div id="card-1" class="timeline__time-node__card closed">
                                 <div class="timeline__time-node__card__date">
                                     yyyy-mm-dd
@@ -103,7 +89,8 @@
                         </div>
 
                         <div class="timeline__time-node">
-                            <div onclick="collapseCard('card-2')" class="timeline__time-node__inner bubble-hover" style="background-image: url(../images/backgrounds/moon-landing-1.jpg)"></div>
+                            <div onclick="collapseCard('card-2')" class="timeline__time-node__inner bubble-hover"
+                                style="background-image: url(../images/backgrounds/moon-landing-1.jpg)"></div>
                             <div id="card-2" class="timeline__time-node__card closed">
                                 <div class="timeline__time-node__card__date">
                                     yyyy-mm-dd
@@ -131,7 +118,8 @@
                         </div>
 
                         <div class="timeline__time-node">
-                            <div onclick="collapseCard('card-3')" class="timeline__time-node__inner bubble-hover" style="background-image: url(../images/backgrounds/moon-landing-1.jpg)"></div>
+                            <div onclick="collapseCard('card-3')" class="timeline__time-node__inner bubble-hover"
+                                style="background-image: url(../images/backgrounds/moon-landing-1.jpg)"></div>
                             <div id="card-3" class="timeline__time-node__card closed">
                                 <div class="timeline__time-node__card__date">
                                     yyyy-mm-dd
@@ -159,7 +147,8 @@
                         </div>
 
                         <div class="timeline__time-node">
-                            <div onclick="collapseCard('card-4')" class="timeline__time-node__inner bubble-hover" style="background-image: url(../images/backgrounds/moon-landing-1.jpg)"></div>
+                            <div onclick="collapseCard('card-4')" class="timeline__time-node__inner bubble-hover"
+                                style="background-image: url(../images/backgrounds/moon-landing-1.jpg)"></div>
                             <div id="card-4" class="timeline__time-node__card closed">
                                 <div class="timeline__time-node__card__date">
                                     yyyy-mm-dd
@@ -187,7 +176,8 @@
                         </div>
 
                         <div class="timeline__time-node">
-                            <div onclick="collapseCard('card-5')" class="timeline__time-node__inner bubble-hover" style="background-image: url(../images/backgrounds/moon-landing-1.jpg)"></div>
+                            <div onclick="collapseCard('card-5')" class="timeline__time-node__inner bubble-hover"
+                                style="background-image: url(../images/backgrounds/moon-landing-1.jpg)"></div>
                             <div id="card-5" class="timeline__time-node__card closed">
                                 <div class="timeline__time-node__card__date">
                                     yyyy-mm-dd
@@ -215,7 +205,8 @@
                         </div>
 
                         <div class="timeline__time-node">
-                            <div onclick="collapseCard('card-6')" class="timeline__time-node__inner bubble-hover" style="background-image: url(../images/backgrounds/moon-landing-1.jpg)"></div>
+                            <div onclick="collapseCard('card-6')" class="timeline__time-node__inner bubble-hover"
+                                style="background-image: url(../images/backgrounds/moon-landing-1.jpg)"></div>
                             <div id="card-6" class="timeline__time-node__card closed">
                                 <div class="timeline__time-node__card__date">
                                     yyyy-mm-dd
@@ -243,7 +234,8 @@
                         </div>
 
                         <div class="timeline__time-node">
-                            <div onclick="collapseCard('card-7')" class="timeline__time-node__inner bubble-hover" style="background-image: url(../images/backgrounds/moon-landing-1.jpg)"></div>
+                            <div onclick="collapseCard('card-7')" class="timeline__time-node__inner bubble-hover"
+                                style="background-image: url(../images/backgrounds/moon-landing-1.jpg)"></div>
                             <div id="card-7" class="timeline__time-node__card closed">
                                 <div class="timeline__time-node__card__date">
                                     yyyy-mm-dd
@@ -271,7 +263,8 @@
                         </div>
 
                         <div class="timeline__time-node">
-                            <div onclick="collapseCard('card-8')" class="timeline__time-node__inner bubble-hover" style="background-image: url(../images/backgrounds/moon-landing-1.jpg)"></div>
+                            <div onclick="collapseCard('card-8')" class="timeline__time-node__inner bubble-hover"
+                                style="background-image: url(../images/backgrounds/moon-landing-1.jpg)"></div>
                             <div id="card-8" class="timeline__time-node__card closed">
                                 <div class="timeline__time-node__card__date">
                                     yyyy-mm-dd
@@ -299,7 +292,8 @@
                         </div>
 
                         <div class="timeline__time-node">
-                            <div onclick="collapseCard('card-9')" class="timeline__time-node__inner bubble-hover" style="background-image: url(../images/backgrounds/moon-landing-1.jpg)"></div>
+                            <div onclick="collapseCard('card-9')" class="timeline__time-node__inner bubble-hover"
+                                style="background-image: url(../images/backgrounds/moon-landing-1.jpg)"></div>
                             <div id="card-9" class="timeline__time-node__card closed">
                                 <div class="timeline__time-node__card__date">
                                     yyyy-mm-dd
@@ -359,7 +353,7 @@
             </div>
         </main>
 
-        <footer>
+        <footer class="fixed">
             <div class="footer-notes">
                 <div class="vertical-middle">
                     <div class="vertical-middle__inner">

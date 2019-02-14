@@ -456,16 +456,22 @@ h2.site-block-title {
     font-size: 50px;
     text-transform: uppercase;
     text-align: center;
+    margin-top: 0;
 }
 
 h2.site-block-title.fix {
-    margin-top: 0;
     margin-bottom: 75px;
 }
 
 p.site-block-text {
     color: white;
     font-size: 30px;
+}
+
+@media screen and (max-width: 1024px) {
+    p.site-block-text {
+        font-size: 25px;
+    }
 }
 
 a.site-block-link {
@@ -518,6 +524,12 @@ aside.index-aside {
     z-index: 512;
 }
 
+@media screen and (max-width: 1024px) {
+    aside.index-aside {
+        display: none;
+    }
+}
+
 ul.index-aside__findme-container {
     float: right;
     margin-right: 50px;
@@ -543,7 +555,7 @@ div.fact-container {
 
 div.fact {
     max-width: 75%;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.75);
     padding: 5px;
 }
 
@@ -888,6 +900,17 @@ aside.aside-blogs {
     float: right;
 }
 
+@media screen and (max-width: 1024px) {
+    main.main-blogs {
+        width: 100%;
+    }
+
+    aside.aside-blogs {
+        width: 100%;
+        margin-bottom: 75px;
+    }
+}
+
 /* Special case for aside blog items */
 
 aside.aside-blogs article.blog-item {
@@ -901,7 +924,9 @@ div.blog-page-container {
 }
 
 @media screen and (max-width: 1024px) {
-    /* WARNING */
+    div.blog-page-container {
+        padding: 0 10px;
+    }
 }
 
 h2.blog-region__title {
@@ -1002,7 +1027,7 @@ time.blog-item__info__posted {
     }
 
     div.blog-item__thumbnail-container {
-        height: 133.333px;
+        height: 200px;
     }
 
     h3.blog-item__title {
@@ -1016,6 +1041,16 @@ time.blog-item__info__posted {
 
     div.blog-item__tag > p {
         font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    article.blog-item {
+        width: 250px;
+    }
+
+    div.blog-item__thumbnail-container {
+        height: 166.666px;
     }
 }
 

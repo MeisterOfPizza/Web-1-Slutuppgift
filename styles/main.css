@@ -1,14 +1,4 @@
 @font-face {
-    font-family: Roboto;
-    src: url("../fonts/Roboto/Roboto-Regular.ttf");
-}
-
-@font-face {
-    font-family: Roboto-Bold;
-    src: url("../fonts/Roboto/Roboto-Bold.ttf");
-}
-
-@font-face {
     font-family: Staatliches;
     src: url("../fonts/Staatliches/Staatliches-Regular.ttf");
 }
@@ -22,14 +12,12 @@ html {
 
 body {
     margin: 0;
-    /*font-family: Roboto;*/
     font-family: Staatliches;
     min-height: 100%;
     background-color: #111;
 }
 
 h1, h2, h3, h4, h5, h6 {
-    /*font-family: Roboto-Bold;*/
     font-family: Staatliches;
     font-weight: 100;
 }
@@ -487,6 +475,12 @@ div.site-block__more-content-arrow {
 }
 
 @media screen and (max-width: 400px) {
+    div.site-block__more-content-arrow {
+        display: none;
+    }
+}
+
+@media screen and (max-height: 700px) {
     div.site-block__more-content-arrow {
         display: none;
     }

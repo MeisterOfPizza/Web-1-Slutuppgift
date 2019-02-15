@@ -4,11 +4,10 @@ var anchors =
 {
     0: "#top",
     1: "#facts",
-    2: "#timeline",
-    3: "#gallery",
-    4: "#blog",
-    5: "#quotes",
-    6: "#about"
+    2: "#gallery",
+    3: "#blog",
+    4: "#quotes",
+    5: "#about"
 };
 
 //When the user scrolls, re evaluate the arrow positions.

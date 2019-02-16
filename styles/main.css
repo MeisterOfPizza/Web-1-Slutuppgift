@@ -65,15 +65,6 @@ div.footer-notes {
     }
 }
 
-@keyframes fade-out {
-    0% {
-        opacity: 1;
-    }
-    100% {
-        opacity: 0;
-    }
-}
-
 @keyframes spin-right {
     0% {
         transform: rotate(0deg);
@@ -630,108 +621,6 @@ p.fact__text {
     }
 }
 
-/* timeline.html */
-
-div.timeline-background {
-    width: 90%;
-    height: 1000px;
-    padding: 200px 0 400px 0;
-}
-
-div.timeline__time-node-wrapper {
-    height: auto;
-    width: 50%;
-}
-
-div.timeline__time-node {
-    width: 150px;
-    height: 150px;
-    z-index: 256;
-    position: relative;
-    margin: auto;
-}
-
-div.timeline__time-node__inner {
-    width: 150px;
-    height: 150px;
-    background-color: white;
-    background-position: center;
-    background-size: cover;
-    border-radius: 150px;
-    z-index: 64;
-}
-
-div.timeline__time-node:not(:last-child) {
-    padding-bottom: 250px;
-}
-
-div.timeline__time-node:not(:last-child)::after {
-    content: "";
-    background-color: white;
-    height: 100%;
-    width: 2px;
-    position: absolute;
-    top: 150px;
-    left: 75px;
-    z-index: -8;
-}
-
-div.timeline__time-node__card {
-    width: 400px;
-    padding: 15px;
-    position: absolute;
-    background-color: white;
-    box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.5);
-    top: 50px;
-    left: 200px;
-    animation: fade-in ease-in-out .5s;
-}
-
-div.timeline__time-node__card.closed {
-    display: none;
-}
-
-div.timeline__time-node__card * {
-    user-select: none; /* Disable user select, this is because of the selection being made upon opening and closing the card, might need a fix? WARNING */
-}
-
-div.timeline__time-node__card__date {
-    position: absolute;
-    top: 0;
-    left: 0;
-    text-align: center;
-    color: white;
-    background-color: darkorchid;
-    padding: 10px 15px;
-    font-size: 16px;
-    transition: all ease .1s;
-}
-
-h2.timeline__time-node__card__title {
-    margin-top: 35px;
-    margin-bottom: 0px;
-}
-
-p.timeline__time-node__card__text {
-    margin-top: 5px;
-}
-
-/* handle cards on opposite sides */
-
-div.timeline__time-node-wrapper div.timeline__time-node:nth-of-type(even) > div.timeline__time-node__card {
-    left: auto;
-    right: 200px;
-}
-
-div.timeline__time-node-wrapper div.timeline__time-node:nth-of-type(even) a.btn {
-    float: right;
-}
-
-div.timeline__time-node-wrapper div.timeline__time-node:nth-of-type(even) div.timeline__time-node__card__date {
-    right: 0;
-    left: auto;
-}
-
 /* gallery.html */
 
 div.gallery-container {
@@ -935,6 +824,7 @@ article.blog-item {
     background-color: #151515;
     margin-right: 15px;
     margin-bottom: 15px;
+    vertical-align: top;
 }
 
 div.blog-item__thumbnail-container {
@@ -948,6 +838,24 @@ img.blog-item__thumbnail {
     height: 100%;
     transition: transform ease-in-out 1s;
     cursor: pointer;
+    animation: rotate-color 5s infinite;
+}
+
+@keyframes rotate-color {
+    0% {
+        filter: hue-rotate(0deg);
+    }
+    100% {
+        filter: hue-rotate(360deg);
+    }
+}
+
+div.blog-item__thumbnail-gradient {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
 }
 
 img.blog-item__thumbnail:hover {

@@ -824,6 +824,7 @@ article.blog-item {
     background-color: #151515;
     margin-right: 15px;
     margin-bottom: 15px;
+    vertical-align: top;
 }
 
 div.blog-item__thumbnail-container {

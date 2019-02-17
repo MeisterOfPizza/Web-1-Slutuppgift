@@ -249,7 +249,7 @@ div.stuck-background {
     content: "";
 
     position: absolute;
-    z-index: -1;
+    z-index: 1024;
 
     right: 0;
     bottom: -5px;
